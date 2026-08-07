@@ -1,39 +1,57 @@
-# Research program — strategy families (M-series and related)
+# Strategies we tried (M-series guide)
 
-This page summarizes **what each registered research family tried**, **how it was
-expressed**, and **what the ledger concluded**. Numbers are historical research
-results under the project protocol — not a claim of current deployable edge.
+This page is the **longer explanation** of each research family: what we tried, how
+it worked, and what we concluded.
 
-Authoritative detail lives in `research/ledger.jsonl` and per-family folders under
-`research/experiments/`. Many continuous-intraday families were closed after honest
-fills; the closing-auction line later produced a holdout pass, then was **frozen /
-banned as a program direction** by user decision (close-auction strategies no longer
-developed). The exclusive direction afterward was continuous intraday minutes-to-hours.
+**Start here if you want detail.** For a one-screen overview, use the
+[README](../README.md).
 
-**How to read status labels**
+**How to use this page**
+
+- Each **M-number** is a *family* of experiments (one idea, sometimes several variants).  
+- We usually wrote the rules **before** looking at results.  
+- **Failed ideas stay in the archive on purpose** — that is how you know the process is real.  
+- Numbers below are historical research results, **not** a promise of future profit.  
+- The raw log is `research/ledger.jsonl`; write-ups live under `research/experiments/`.
+
+**Status words in plain English**
 
 | Label | Meaning |
 |---|---|
-| **PASS** | Cleared its pre-registered promotion bars |
-| **FAIL / KILL / CLOSED** | Registered bars failed; family closed (often with an obituary) |
-| **BETWEEN** | Ran once; lean positive or mixed; CI spans zero; look spent |
-| **NULL-AT-ADMISSION** | Pre-declared battery: zero signals cleared FDR; validate unread |
-| **DIAGNOSTIC / REPORT-ONLY** | Measurement tool; not a trading gate |
-| **FROZEN / BANNED** | User policy: no further work in that direction |
-| **PARKED** | Registered but not built or not run |
+| **Pass** | Cleared the pre-written pass/fail bar |
+| **Fail / kill / closed** | Did not clear the bar; we stopped that idea |
+| **Between / inconclusive** | One careful look; result fuzzy (often CI includes zero) |
+| **Null-at-admission** | Many pre-declared signals; none survived the multiple-testing screen |
+| **Diagnostic / report-only** | Measurement tool, not a trading green light |
+| **Frozen / banned** | Policy: no more work in that direction |
+| **Parked** | Written down but not built or not run |
 
 ---
 
-## Program arc (why the list looks like this)
+## The story in five chapters
 
-1. **M3–M5** — Named-payer continuous plans + ML overlays under a causal replayer.  
-   Apparent maker edge largely **retracted** once fills were ground-truthed.
-2. **M6–M15** — Closing-auction / NOII line. Produced the only holdout-confirmed edge
-   (`M6-FINAL`), mechanism work (`M12`), meta gate (`M8`), then **breadth fail** (`M11`).
-3. **M16–M19** — Execution audit, flow book, reversion system, cost doctrine.
-4. **M20–M27** — Intraday after the close-auction ban: macro windows, open fade, gap-day, etc.
-5. **M28–M30** — Adequately powered batteries / OOS on open-print structure and retail flow:
-   three **null / not-confirmed** outcomes in a row.
+1. **M3–M5 — Same-day “pressure” trades**  
+   Only trade when a known market pressure is active (gap, VWAP stretch, leveraged-ETF
+   rebalance, …). Later try ML on top.  
+   *Punchline:* early profits mostly vanished once fills were made realistic.
+
+2. **M6–M15 — The closing auction**  
+   Use the official 4:00 close as a clean exit. Study imbalance and “where the auction
+   says it will clear.”  
+   *Punchline:* one rule passed a locked final test; it did **not** generalize to most
+   Nasdaq names; close work was later **stopped as a program direction**.
+
+3. **M16–M18 — Costs and mean reversion**  
+   Measure real trading friction; try mean reversion as a full *system* of filters.  
+   *Punchline:* filters reduce losses but do not create edge from a mid-neutral trigger.
+
+4. **M20–M27 — Other same-day ideas**  
+   Economic releases, open fade, gap days, earnings days, sizing.  
+   *Punchline:* mixed; several “interesting but not promotable” or cost-killed results.
+
+5. **M28–M30 — Wide, careful batteries**  
+   Many signals × many stocks, or clean tests on stocks never used in discovery.  
+   *Punchline:* three strong null / not-confirmed outcomes on the open-print structure.
 
 ---
 
