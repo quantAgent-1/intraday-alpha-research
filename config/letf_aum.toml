@@ -1,0 +1,42 @@
+# Leveraged / inverse ETF AUM table for the LETF close-rebalance estimator.
+#
+# Deploy-lens / named-payer mechanism input ONLY. PROTOCOL v6 §5 bans
+# forward-collected & deploy-lens series from Stage A gated results; this table
+# feeds the LETF rebalance-pressure detector's magnitude estimate, not a gate.
+#
+# aum_usd rounded to the nearest $0.1B. `as_of` is the honest date of the cited
+# figure (issuer pages restate daily; trackers lag a day or two). Refresh
+# quarterly — letf.staleness_check() warns past 90 days.
+#
+# `index` groups ETFs whose rebalance flow hits the SAME underlying basket, so
+# the complex-level net demand can net bull vs. bear notional. SOXX = NYSE/ICE
+# Semiconductor complex (Direxion tracks the NYSE Semiconductor Index); QQQ =
+# Nasdaq-100.
+
+[etf.SOXL]
+leverage = 3.0
+aum_usd  = 25_300_000_000   # $25.3B
+index    = "SOXX"
+as_of    = "2026-07-14"
+source   = "https://www.tradingview.com/symbols/AMEX-SOXL/"
+
+[etf.SOXS]
+leverage = -3.0
+aum_usd  = 1_500_000_000    # $1.5B
+index    = "SOXX"
+as_of    = "2026-07-14"
+source   = "https://etfdb.com/etf/SOXS/"
+
+[etf.TQQQ]
+leverage = 3.0
+aum_usd  = 32_800_000_000   # $32.8B (etfdb, as of 2026-06-13 — most recent findable)
+index    = "QQQ"
+as_of    = "2026-06-13"
+source   = "https://etfdb.com/etf/TQQQ/"
+
+[etf.SQQQ]
+leverage = -3.0
+aum_usd  = 2_200_000_000    # $2.2B
+index    = "QQQ"
+as_of    = "2026-07-14"
+source   = "https://www.tipranks.com/etf/sqqq"

@@ -1,0 +1,104 @@
+{
+  "trial": "daily_swing_v1",
+  "feature_version": "v1",
+  "out_dir": "<repo-root>\\research\\experiments\\daily-swing-v1",
+  "n_sessions_pool": 720,
+  "n_symbols": 12,
+  "n_folds": 23,
+  "embargo_sessions": 6,
+  "modal_et_time_nvda": "15:55:00",
+  "params": {
+    "objective": "huber",
+    "huber_delta": 3.0,
+    "num_leaves": 63,
+    "learning_rate": 0.05,
+    "min_data_in_leaf": 300,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "lambda_l2": 5.0,
+    "verbosity": -1,
+    "seed": 7,
+    "num_threads": 0
+  },
+  "cv": {
+    "test_block_sessions": 21,
+    "min_train_sessions": 250,
+    "embargo_sessions": 6
+  },
+  "results": {
+    "1": {
+      "pooled": {
+        "mean_ic": 0.0375,
+        "ci_lo": 0.00658,
+        "ci_hi": 0.06746,
+        "n_sessions": 429,
+        "n_rows": 5628,
+        "ic_positive_share": 0.5455
+      },
+      "per_symbol": {
+        "NVDA": {
+          "mean_ic": 0.04067,
+          "ci_lo": -0.05055,
+          "ci_hi": 0.13402,
+          "n_sessions": 469
+        },
+        "TSLA": {
+          "mean_ic": 0.04154,
+          "ci_lo": -0.05092,
+          "ci_hi": 0.12836,
+          "n_sessions": 469
+        }
+      }
+    },
+    "3": {
+      "pooled": {
+        "mean_ic": 0.01107,
+        "ci_lo": -0.02007,
+        "ci_hi": 0.04198,
+        "n_sessions": 408,
+        "n_rows": 5604,
+        "ic_positive_share": 0.4975
+      },
+      "per_symbol": {
+        "NVDA": {
+          "mean_ic": 0.01564,
+          "ci_lo": -0.07434,
+          "ci_hi": 0.10621,
+          "n_sessions": 467
+        },
+        "TSLA": {
+          "mean_ic": 0.0099,
+          "ci_lo": -0.0815,
+          "ci_hi": 0.09754,
+          "n_sessions": 467
+        }
+      }
+    },
+    "5": {
+      "pooled": {
+        "mean_ic": -0.01901,
+        "ci_lo": -0.05261,
+        "ci_hi": 0.01217,
+        "n_sessions": 383,
+        "n_rows": 5580,
+        "ic_positive_share": 0.4804
+      },
+      "per_symbol": {
+        "NVDA": {
+          "mean_ic": -0.09298,
+          "ci_lo": -0.17914,
+          "ci_hi": -0.00292,
+          "n_sessions": 465
+        },
+        "TSLA": {
+          "mean_ic": -0.03698,
+          "ci_lo": -0.12895,
+          "ci_hi": 0.05055,
+          "n_sessions": 465
+        }
+      }
+    }
+  },
+  "wall_s": 3.09
+}

@@ -1,0 +1,902 @@
+{
+  "trial_id": "M8-v2-mechanism-features-v1",
+  "seed": 7,
+  "events_path": "research/experiments/M6-FINAL-basis/events.parquet",
+  "meta_counts": {
+    "events_rows": 7959,
+    "candidates_basis_ge_10": 6198,
+    "candidates_labeled": 6198,
+    "candidates_dropped_null_net": 0
+  },
+  "pre_model_redundancy_diagnostic": {
+    "train_span": "session <= 2026-02-28",
+    "n_train_rows": 5910,
+    "corr_abs_f_over_adv_vs_v1_feature": {
+      "basis_bps": 0.021444626725239516,
+      "near_far_bps": 0.01467072371355836,
+      "near_ref_bps": 0.02193708124403524,
+      "paired_ratio": 0.057628904481921636,
+      "norm_imb": 0.01719420732968887,
+      "imb_growth_53": -0.003583959227941528,
+      "imb_growth_51": -0.005497965611239311,
+      "msg_count": null,
+      "vol20": 0.0071872860808469205,
+      "log_adv20": 0.3529939264704851
+    }
+  },
+  "feature_funnel": {
+    "n_events": 6198,
+    "adv20_source": "event_frame",
+    "vol20_source": "event_frame",
+    "basis_source": "event_frame",
+    "no_p_1555_or_bbo": 0,
+    "no_r_pinned": 0,
+    "no_day_range": 0,
+    "no_day_vol_ratio": 0,
+    "feature_null_counts": {
+      "abs_f_over_adv": 0,
+      "flow_aligned": 0,
+      "complex_intensity": 0,
+      "range_pos_1555": 0,
+      "month_end": 0,
+      "day_vol_ratio": 0
+    },
+    "feature_null_rates": {
+      "abs_f_over_adv": 0.0,
+      "flow_aligned": 0.0,
+      "complex_intensity": 0.0,
+      "range_pos_1555": 0.0,
+      "month_end": 0.0,
+      "day_vol_ratio": 0.0
+    }
+  },
+  "occam_gate_definition": {
+    "formula": "flow_aligned > 0 AND abs_f_over_adv >= trailing_in_sample_top_tercile_boundary",
+    "boundary": "2/3 quantile of abs_f_over_adv, fit on the fold's TRAIN rows restricted to abs_f_over_adv > 0 (M12 Cell A's own tercile population) -- FLAGGED CHOICE, see models/m8v2_run.py module docstring"
+  },
+  "folds": [
+    {
+      "test_start": "2022-01-02",
+      "test_end": "2022-07-02",
+      "n_train_sessions": 491,
+      "n_test_sessions": 125
+    },
+    {
+      "test_start": "2022-07-02",
+      "test_end": "2023-01-02",
+      "n_train_sessions": 616,
+      "n_test_sessions": 125
+    },
+    {
+      "test_start": "2023-01-02",
+      "test_end": "2023-07-02",
+      "n_train_sessions": 741,
+      "n_test_sessions": 124
+    },
+    {
+      "test_start": "2023-07-02",
+      "test_end": "2024-01-02",
+      "n_train_sessions": 865,
+      "n_test_sessions": 124
+    },
+    {
+      "test_start": "2024-01-02",
+      "test_end": "2024-07-02",
+      "n_train_sessions": 989,
+      "n_test_sessions": 125
+    },
+    {
+      "test_start": "2024-07-02",
+      "test_end": "2025-01-02",
+      "n_train_sessions": 1114,
+      "n_test_sessions": 124
+    },
+    {
+      "test_start": "2025-01-02",
+      "test_end": "2025-07-02",
+      "n_train_sessions": 1238,
+      "n_test_sessions": 123
+    },
+    {
+      "test_start": "2025-07-02",
+      "test_end": "2026-01-02",
+      "n_train_sessions": 1361,
+      "n_test_sessions": 124
+    },
+    {
+      "test_start": "2026-01-02",
+      "test_end": "2026-07-02",
+      "n_train_sessions": 1485,
+      "n_test_sessions": 102
+    }
+  ],
+  "n_folds": 9,
+  "streams": {
+    "ungated_baseline": {
+      "n": 4735,
+      "n_sessions": 1096,
+      "hit_rate": 0.5364,
+      "net_bps_mean": 2.21,
+      "ci_lo": 1.503,
+      "ci_hi": 2.928,
+      "net_bps_std": 19.366,
+      "sharpe_per_trade": 0.1141,
+      "n_days": 1096,
+      "sharpe_daily": 0.1738,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 5,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 965,
+          "net_bps_mean": 2.114,
+          "hit_rate": 0.5565
+        },
+        "GOOGL": {
+          "n": 908,
+          "net_bps_mean": -0.259,
+          "hit_rate": 0.4648
+        },
+        "MU": {
+          "n": 911,
+          "net_bps_mean": 0.823,
+          "hit_rate": 0.5104
+        },
+        "NVDA": {
+          "n": 972,
+          "net_bps_mean": 4.416,
+          "hit_rate": 0.5823
+        },
+        "TSLA": {
+          "n": 979,
+          "net_bps_mean": 3.695,
+          "hit_rate": 0.5618
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 987,
+          "net_bps_mean": 3.624,
+          "hit_rate": 0.5775
+        },
+        "2023": {
+          "n": 1042,
+          "net_bps_mean": 1.457,
+          "hit_rate": 0.5307
+        },
+        "2024": {
+          "n": 1112,
+          "net_bps_mean": 1.866,
+          "hit_rate": 0.5144
+        },
+        "2025": {
+          "n": 1119,
+          "net_bps_mean": 1.604,
+          "hit_rate": 0.5228
+        },
+        "2026": {
+          "n": 475,
+          "net_bps_mean": 3.156,
+          "hit_rate": 0.5474
+        }
+      }
+    },
+    "baseline1_v1_gated_q0.50": {
+      "n": 4059,
+      "n_sessions": 1093,
+      "hit_rate": 0.5543,
+      "net_bps_mean": 2.913,
+      "ci_lo": 2.111,
+      "ci_hi": 3.724,
+      "net_bps_std": 20.047,
+      "sharpe_per_trade": 0.1453,
+      "n_days": 1093,
+      "sharpe_daily": 0.2035,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 5,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 870,
+          "net_bps_mean": 2.43,
+          "hit_rate": 0.5644
+        },
+        "GOOGL": {
+          "n": 611,
+          "net_bps_mean": 0.852,
+          "hit_rate": 0.5041
+        },
+        "MU": {
+          "n": 782,
+          "net_bps_mean": 1.395,
+          "hit_rate": 0.5205
+        },
+        "NVDA": {
+          "n": 876,
+          "net_bps_mean": 4.993,
+          "hit_rate": 0.5936
+        },
+        "TSLA": {
+          "n": 920,
+          "net_bps_mean": 4.047,
+          "hit_rate": 0.5696
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 939,
+          "net_bps_mean": 3.891,
+          "hit_rate": 0.5804
+        },
+        "2023": {
+          "n": 879,
+          "net_bps_mean": 2.201,
+          "hit_rate": 0.5495
+        },
+        "2024": {
+          "n": 866,
+          "net_bps_mean": 2.825,
+          "hit_rate": 0.5485
+        },
+        "2025": {
+          "n": 938,
+          "net_bps_mean": 2.354,
+          "hit_rate": 0.5341
+        },
+        "2026": {
+          "n": 437,
+          "net_bps_mean": 3.615,
+          "hit_rate": 0.5629
+        }
+      }
+    },
+    "v2_gated_q0.50": {
+      "n": 3985,
+      "n_sessions": 1089,
+      "hit_rate": 0.5551,
+      "net_bps_mean": 2.876,
+      "ci_lo": 2.091,
+      "ci_hi": 3.683,
+      "net_bps_std": 19.946,
+      "sharpe_per_trade": 0.1442,
+      "n_days": 1089,
+      "sharpe_daily": 0.2054,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 5,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 852,
+          "net_bps_mean": 2.403,
+          "hit_rate": 0.5622
+        },
+        "GOOGL": {
+          "n": 606,
+          "net_bps_mean": 0.666,
+          "hit_rate": 0.5017
+        },
+        "MU": {
+          "n": 772,
+          "net_bps_mean": 1.301,
+          "hit_rate": 0.522
+        },
+        "NVDA": {
+          "n": 873,
+          "net_bps_mean": 5.064,
+          "hit_rate": 0.5979
+        },
+        "TSLA": {
+          "n": 882,
+          "net_bps_mean": 4.064,
+          "hit_rate": 0.5714
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 927,
+          "net_bps_mean": 3.907,
+          "hit_rate": 0.5814
+        },
+        "2023": {
+          "n": 871,
+          "net_bps_mean": 2.225,
+          "hit_rate": 0.5488
+        },
+        "2024": {
+          "n": 809,
+          "net_bps_mean": 3.188,
+          "hit_rate": 0.5575
+        },
+        "2025": {
+          "n": 939,
+          "net_bps_mean": 1.851,
+          "hit_rate": 0.5293
+        },
+        "2026": {
+          "n": 439,
+          "net_bps_mean": 3.607,
+          "hit_rate": 0.5626
+        }
+      }
+    },
+    "baseline1_v1_gated_q0.55": {
+      "n": 2844,
+      "n_sessions": 1049,
+      "hit_rate": 0.5774,
+      "net_bps_mean": 4.031,
+      "ci_lo": 3.109,
+      "ci_hi": 5.003,
+      "net_bps_std": 20.623,
+      "sharpe_per_trade": 0.1954,
+      "n_days": 1049,
+      "sharpe_daily": 0.2436,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 5,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 638,
+          "net_bps_mean": 3.244,
+          "hit_rate": 0.5831
+        },
+        "GOOGL": {
+          "n": 323,
+          "net_bps_mean": 1.531,
+          "hit_rate": 0.5294
+        },
+        "MU": {
+          "n": 569,
+          "net_bps_mean": 2.068,
+          "hit_rate": 0.529
+        },
+        "NVDA": {
+          "n": 641,
+          "net_bps_mean": 6.511,
+          "hit_rate": 0.6131
+        },
+        "TSLA": {
+          "n": 673,
+          "net_bps_mean": 5.273,
+          "hit_rate": 0.6018
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 735,
+          "net_bps_mean": 4.58,
+          "hit_rate": 0.5946
+        },
+        "2023": {
+          "n": 599,
+          "net_bps_mean": 3.621,
+          "hit_rate": 0.5776
+        },
+        "2024": {
+          "n": 645,
+          "net_bps_mean": 4.007,
+          "hit_rate": 0.5752
+        },
+        "2025": {
+          "n": 671,
+          "net_bps_mean": 2.582,
+          "hit_rate": 0.544
+        },
+        "2026": {
+          "n": 194,
+          "net_bps_mean": 8.308,
+          "hit_rate": 0.634
+        }
+      }
+    },
+    "v2_gated_q0.55": {
+      "n": 2615,
+      "n_sessions": 1022,
+      "hit_rate": 0.5755,
+      "net_bps_mean": 3.916,
+      "ci_lo": 2.853,
+      "ci_hi": 4.918,
+      "net_bps_std": 20.408,
+      "sharpe_per_trade": 0.1919,
+      "n_days": 1022,
+      "sharpe_daily": 0.2297,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 5,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 597,
+          "net_bps_mean": 3.035,
+          "hit_rate": 0.5745
+        },
+        "GOOGL": {
+          "n": 315,
+          "net_bps_mean": 1.042,
+          "hit_rate": 0.527
+        },
+        "MU": {
+          "n": 518,
+          "net_bps_mean": 2.108,
+          "hit_rate": 0.5309
+        },
+        "NVDA": {
+          "n": 582,
+          "net_bps_mean": 6.774,
+          "hit_rate": 0.6203
+        },
+        "TSLA": {
+          "n": 603,
+          "net_bps_mean": 5.086,
+          "hit_rate": 0.597
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 728,
+          "net_bps_mean": 4.503,
+          "hit_rate": 0.5934
+        },
+        "2023": {
+          "n": 587,
+          "net_bps_mean": 3.744,
+          "hit_rate": 0.5792
+        },
+        "2024": {
+          "n": 581,
+          "net_bps_mean": 3.998,
+          "hit_rate": 0.5766
+        },
+        "2025": {
+          "n": 553,
+          "net_bps_mean": 2.131,
+          "hit_rate": 0.5335
+        },
+        "2026": {
+          "n": 166,
+          "net_bps_mean": 7.616,
+          "hit_rate": 0.6205
+        }
+      }
+    },
+    "baseline1_v1_gated_q0.60": {
+      "n": 1238,
+      "n_sessions": 687,
+      "hit_rate": 0.5953,
+      "net_bps_mean": 4.595,
+      "ci_lo": 3.233,
+      "ci_hi": 6.08,
+      "net_bps_std": 20.225,
+      "sharpe_per_trade": 0.2272,
+      "n_days": 687,
+      "sharpe_daily": 0.225,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 4,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 290,
+          "net_bps_mean": 4.228,
+          "hit_rate": 0.6103
+        },
+        "GOOGL": {
+          "n": 99,
+          "net_bps_mean": 3.485,
+          "hit_rate": 0.6263
+        },
+        "MU": {
+          "n": 228,
+          "net_bps_mean": 2.703,
+          "hit_rate": 0.5307
+        },
+        "NVDA": {
+          "n": 290,
+          "net_bps_mean": 7.038,
+          "hit_rate": 0.6276
+        },
+        "TSLA": {
+          "n": 331,
+          "net_bps_mean": 4.411,
+          "hit_rate": 0.5891
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 258,
+          "net_bps_mean": 6.122,
+          "hit_rate": 0.6318
+        },
+        "2023": {
+          "n": 247,
+          "net_bps_mean": 3.957,
+          "hit_rate": 0.5992
+        },
+        "2024": {
+          "n": 380,
+          "net_bps_mean": 4.826,
+          "hit_rate": 0.5895
+        },
+        "2025": {
+          "n": 353,
+          "net_bps_mean": 3.677,
+          "hit_rate": 0.5722
+        }
+      }
+    },
+    "v2_gated_q0.60": {
+      "n": 1088,
+      "n_sessions": 612,
+      "hit_rate": 0.6149,
+      "net_bps_mean": 5.396,
+      "ci_lo": 3.986,
+      "ci_hi": 6.938,
+      "net_bps_std": 20.012,
+      "sharpe_per_trade": 0.2696,
+      "n_days": 612,
+      "sharpe_daily": 0.2595,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 4,
+      "years": [
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 250,
+          "net_bps_mean": 4.744,
+          "hit_rate": 0.636
+        },
+        "GOOGL": {
+          "n": 94,
+          "net_bps_mean": 1.817,
+          "hit_rate": 0.5851
+        },
+        "MU": {
+          "n": 207,
+          "net_bps_mean": 2.961,
+          "hit_rate": 0.5314
+        },
+        "NVDA": {
+          "n": 258,
+          "net_bps_mean": 8.916,
+          "hit_rate": 0.655
+        },
+        "TSLA": {
+          "n": 279,
+          "net_bps_mean": 5.736,
+          "hit_rate": 0.6308
+        }
+      },
+      "per_year": {
+        "2022": {
+          "n": 316,
+          "net_bps_mean": 4.984,
+          "hit_rate": 0.6171
+        },
+        "2023": {
+          "n": 277,
+          "net_bps_mean": 4.949,
+          "hit_rate": 0.6173
+        },
+        "2024": {
+          "n": 338,
+          "net_bps_mean": 6.091,
+          "hit_rate": 0.6302
+        },
+        "2025": {
+          "n": 157,
+          "net_bps_mean": 5.516,
+          "hit_rate": 0.5732
+        }
+      }
+    },
+    "occam_gated": {
+      "n": 1217,
+      "n_sessions": 656,
+      "hit_rate": 0.5588,
+      "net_bps_mean": 3.573,
+      "ci_lo": 2.164,
+      "ci_hi": 4.921,
+      "net_bps_std": 20.235,
+      "sharpe_per_trade": 0.1766,
+      "n_days": 656,
+      "sharpe_daily": 0.2285,
+      "n_symbols": 5,
+      "symbols": [
+        "AMD",
+        "GOOGL",
+        "MU",
+        "NVDA",
+        "TSLA"
+      ],
+      "n_years": 4,
+      "years": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "per_symbol": {
+        "AMD": {
+          "n": 186,
+          "net_bps_mean": 2.11,
+          "hit_rate": 0.5161
+        },
+        "GOOGL": {
+          "n": 148,
+          "net_bps_mean": -1.758,
+          "hit_rate": 0.3851
+        },
+        "MU": {
+          "n": 121,
+          "net_bps_mean": 0.685,
+          "hit_rate": 0.4959
+        },
+        "NVDA": {
+          "n": 386,
+          "net_bps_mean": 4.417,
+          "hit_rate": 0.6114
+        },
+        "TSLA": {
+          "n": 376,
+          "net_bps_mean": 6.457,
+          "hit_rate": 0.6144
+        }
+      },
+      "per_year": {
+        "2023": {
+          "n": 203,
+          "net_bps_mean": 5.748,
+          "hit_rate": 0.6256
+        },
+        "2024": {
+          "n": 307,
+          "net_bps_mean": 4.912,
+          "hit_rate": 0.5765
+        },
+        "2025": {
+          "n": 487,
+          "net_bps_mean": 1.308,
+          "hit_rate": 0.5216
+        },
+        "2026": {
+          "n": 220,
+          "net_bps_mean": 4.71,
+          "hit_rate": 0.5545
+        }
+      }
+    }
+  },
+  "deltas_v2_minus_v1_gated_q0.55": {
+    "net_bps_mean": -0.115,
+    "hit_rate": -0.0019,
+    "sharpe_per_trade": -0.0035,
+    "ci_lo": -0.256
+  },
+  "deltas_v2_minus_occam_gated": {
+    "sharpe_per_trade": 0.0153,
+    "net_bps_mean": 0.343
+  },
+  "cross_check_v1_reproduction_vs_M8_meta_v1": {
+    "available": true,
+    "n_overlap": 4735,
+    "corr": 0.9999999999999999
+  },
+  "cross_check_f_adv_vs_m12_cellA": {
+    "available": true,
+    "n_overlap": 6198,
+    "corr": 0.7754942806801289
+  },
+  "v2_feature_importances": [
+    {
+      "feature": "paired_ratio",
+      "mean_gain": 298.10183968066445,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "vol20",
+      "mean_gain": 188.3242431945271,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "range_pos_1555",
+      "mean_gain": 150.10710847377777,
+      "n_folds": 9,
+      "is_v2_new": true
+    },
+    {
+      "feature": "near_far_bps",
+      "mean_gain": 137.16339446438684,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "norm_imb",
+      "mean_gain": 122.00478121969435,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "log_adv20",
+      "mean_gain": 98.5790134800805,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "day_vol_ratio",
+      "mean_gain": 79.24107197920482,
+      "n_folds": 9,
+      "is_v2_new": true
+    },
+    {
+      "feature": "basis_bps",
+      "mean_gain": 75.6796343922615,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "near_ref_bps",
+      "mean_gain": 62.87866421871715,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "imb_growth_51",
+      "mean_gain": 58.11039695474837,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "imb_growth_53",
+      "mean_gain": 43.475358168284096,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "complex_intensity",
+      "mean_gain": 14.663746780819363,
+      "n_folds": 9,
+      "is_v2_new": true
+    },
+    {
+      "feature": "oh_NVDA",
+      "mean_gain": 10.491841051313612,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "flow_aligned",
+      "mean_gain": 9.484743303722805,
+      "n_folds": 9,
+      "is_v2_new": true
+    },
+    {
+      "feature": "abs_f_over_adv",
+      "mean_gain": 4.551438861423069,
+      "n_folds": 9,
+      "is_v2_new": true
+    },
+    {
+      "feature": "oh_AMD",
+      "mean_gain": 1.3589455816480849,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "oh_MU",
+      "mean_gain": 0.8360977702670627,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "oh_TSLA",
+      "mean_gain": 0.34045778380499947,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "msg_count",
+      "mean_gain": 0.0,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "oh_GOOGL",
+      "mean_gain": 0.0,
+      "n_folds": 9,
+      "is_v2_new": false
+    },
+    {
+      "feature": "month_end",
+      "mean_gain": 0.0,
+      "n_folds": 9,
+      "is_v2_new": true
+    }
+  ]
+}

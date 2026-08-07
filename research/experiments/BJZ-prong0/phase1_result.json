@@ -1,0 +1,372 @@
+{
+ "main": {
+  "tag": "discovery-10",
+  "imb_key": "rimb",
+  "event_n": 1118,
+  "T": 514,
+  "fires_per_day": 2.1750972762645913,
+  "funnels": [
+   {
+    "sym": "NVDA",
+    "kept": 298,
+    "no_bars": 0,
+    "no_trades_tm1": 305,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "TSLA",
+    "kept": 186,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "AMD",
+    "kept": 185,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "MU",
+    "kept": 603,
+    "no_bars": 0,
+    "no_trades_tm1": 0,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "GOOGL",
+    "kept": 185,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "KLAC",
+    "kept": 598,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 5,
+    "bad_open": 0
+   },
+   {
+    "sym": "MRVL",
+    "kept": 602,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "LRCX",
+    "kept": 599,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 4,
+    "bad_open": 0
+   },
+   {
+    "sym": "TXN",
+    "kept": 597,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 6,
+    "bad_open": 0
+   },
+   {
+    "sym": "AMAT",
+    "kept": 597,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 6,
+    "bad_open": 0
+   }
+  ],
+  "daily_mid": {
+   "mean": -0.8422176615265687,
+   "ci_lo": -18.428379265139412,
+   "ci_hi": 16.306662440921137
+  },
+  "daily_net_primary": {
+   "cost": 3.206,
+   "mean": -4.048217661526567,
+   "ci_lo": -21.634379265139412,
+   "ci_hi": 13.100662440921136
+  },
+  "daily_net_optimistic": {
+   "cost": 1.056,
+   "mean": -1.8982176615265693,
+   "ci_lo": -19.484379265139406,
+   "ci_hi": 15.25066244092114
+  },
+  "daily_net_double": {
+   "cost": 6.206,
+   "mean": -7.048217661526568,
+   "ci_lo": -24.634379265139412,
+   "ci_hi": 10.100662440921136
+  },
+  "event_mid": {
+   "mean": 0.07622370814540981,
+   "ci_lo": -16.346309950892984,
+   "ci_hi": 16.30650116581281
+  },
+  "per_name": {
+   "AMAT": {
+    "mean": -34.81,
+    "n": 150
+   },
+   "LRCX": {
+    "mean": -19.85,
+    "n": 150
+   },
+   "TXN": {
+    "mean": -9.33,
+    "n": 150
+   },
+   "MRVL": {
+    "mean": -12.35,
+    "n": 151
+   },
+   "AMD": {
+    "mean": 30.49,
+    "n": 47
+   },
+   "NVDA": {
+    "mean": 12.7,
+    "n": 75
+   },
+   "KLAC": {
+    "mean": 31.2,
+    "n": 150
+   },
+   "MU": {
+    "mean": -2.59,
+    "n": 151
+   },
+   "GOOGL": {
+    "mean": 28.82,
+    "n": 47
+   },
+   "TSLA": {
+    "mean": 74.9,
+    "n": 47
+   }
+  },
+  "by_year": {
+   "2024": {
+    "mean": -5.82,
+    "n": 517
+   },
+   "2025": {
+    "mean": -2.66,
+    "n": 378
+   },
+   "2026": {
+    "mean": 18.38,
+    "n": 223
+   }
+  }
+ },
+ "oddlot": {
+  "tag": "discovery-10 odd-lot variant",
+  "imb_key": "rimb_odd",
+  "event_n": 1118,
+  "T": 520,
+  "fires_per_day": 2.15,
+  "funnels": [
+   {
+    "sym": "NVDA",
+    "kept": 298,
+    "no_bars": 0,
+    "no_trades_tm1": 305,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "TSLA",
+    "kept": 186,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "AMD",
+    "kept": 185,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "MU",
+    "kept": 603,
+    "no_bars": 0,
+    "no_trades_tm1": 0,
+    "few_classified": 0,
+    "no_exit": 0,
+    "bad_open": 0
+   },
+   {
+    "sym": "GOOGL",
+    "kept": 185,
+    "no_bars": 0,
+    "no_trades_tm1": 417,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "KLAC",
+    "kept": 598,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 5,
+    "bad_open": 0
+   },
+   {
+    "sym": "MRVL",
+    "kept": 602,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 1,
+    "bad_open": 0
+   },
+   {
+    "sym": "LRCX",
+    "kept": 599,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 4,
+    "bad_open": 0
+   },
+   {
+    "sym": "TXN",
+    "kept": 597,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 6,
+    "bad_open": 0
+   },
+   {
+    "sym": "AMAT",
+    "kept": 597,
+    "no_bars": 0,
+    "no_trades_tm1": 63,
+    "few_classified": 0,
+    "no_exit": 6,
+    "bad_open": 0
+   }
+  ],
+  "daily_mid": {
+   "mean": 15.707310942517703,
+   "ci_lo": -0.5269383631363579,
+   "ci_hi": 32.17284468894259
+  },
+  "daily_net_primary": {
+   "cost": 3.206,
+   "mean": 12.501310942517701,
+   "ci_lo": -3.73293836313636,
+   "ci_hi": 28.966844688942594
+  },
+  "daily_net_optimistic": {
+   "cost": 1.056,
+   "mean": 14.6513109425177,
+   "ci_lo": -1.5829383631363618,
+   "ci_hi": 31.116844688942596
+  },
+  "daily_net_double": {
+   "cost": 6.206,
+   "mean": 9.5013109425177,
+   "ci_lo": -6.73293836313636,
+   "ci_hi": 25.966844688942594
+  },
+  "event_mid": {
+   "mean": 14.302753287371312,
+   "ci_lo": -1.5212467803490246,
+   "ci_hi": 30.73664017082089
+  },
+  "per_name": {
+   "TXN": {
+    "mean": 13.96,
+    "n": 150
+   },
+   "MU": {
+    "mean": 19.15,
+    "n": 151
+   },
+   "GOOGL": {
+    "mean": 18.05,
+    "n": 47
+   },
+   "LRCX": {
+    "mean": 17.32,
+    "n": 150
+   },
+   "KLAC": {
+    "mean": 29.64,
+    "n": 150
+   },
+   "AMAT": {
+    "mean": -14.15,
+    "n": 150
+   },
+   "NVDA": {
+    "mean": 10.9,
+    "n": 75
+   },
+   "MRVL": {
+    "mean": 17.26,
+    "n": 151
+   },
+   "TSLA": {
+    "mean": -16.61,
+    "n": 47
+   },
+   "AMD": {
+    "mean": 55.12,
+    "n": 47
+   }
+  },
+  "by_year": {
+   "2024": {
+    "mean": 1.27,
+    "n": 556
+   },
+   "2025": {
+    "mean": 20.37,
+    "n": 364
+   },
+   "2026": {
+    "mean": 39.74,
+    "n": 198
+   }
+  }
+ },
+ "corr_vs_quote_oli": 0.0661434929375693,
+ "g1": false,
+ "g2": false,
+ "verdict": "METHOD-FAILED"
+}

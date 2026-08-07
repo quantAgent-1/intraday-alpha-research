@@ -1,0 +1,49 @@
+{
+  "source": "forward",
+  "asof": "2026-07-23T06:05:45.099663+00:00",
+  "panel": {
+    "source": "forward",
+    "T": 3,
+    "mean_usd": 45.5092,
+    "ci_lo_usd": 0.0,
+    "ci_hi_usd": 131.9923,
+    "sr_native": 0.6073,
+    "psr_sr0_0": 0.8893,
+    "sigma_sr_hat": null,
+    "min_trl": 5.43,
+    "gamma3": 1.7249,
+    "gamma4": 1.5,
+    "rho": -0.1495,
+    "mean_deploy_usd": 5.4611,
+    "n_degenerate_sessions": 1,
+    "n_single_event_sessions": 0,
+    "n_multi_event_sessions": 3,
+    "n_vol_history_skips": 0
+  },
+  "streams": [
+    {
+      "stream": "classical",
+      "T": 3,
+      "sr_native": 0.4757,
+      "psr_sr0_0": 0.8428,
+      "sigma_sr_hat": null,
+      "min_trl": 8.02
+    },
+    {
+      "stream": "meta",
+      "T": 2,
+      "sr_native": 0.4946,
+      "psr_sr0_0": 0.8871,
+      "sigma_sr_hat": 0.4082,
+      "min_trl": 3.69
+    },
+    {
+      "stream": "portfolio",
+      "T": 2,
+      "sr_native": 0.8556,
+      "psr_sr0_0": 0.982,
+      "sigma_sr_hat": 0.4082,
+      "min_trl": 1.23
+    }
+  ]
+}

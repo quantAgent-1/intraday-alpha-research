@@ -1,0 +1,217 @@
+{
+  "spec": "F1-prong0-predeclaration",
+  "note": "PRE-DECLARED DIAGNOSTIC -- correlations of contemporaneous state variables only; no returns, no P&L computed.",
+  "config": {
+    "symbols": [
+      "MU",
+      "NVDA",
+      "TSLA",
+      "AMD",
+      "GOOGL"
+    ],
+    "blacklist": "ZLGU4WPCNRHXMQO569T",
+    "min_fill_size": 100,
+    "bucket_window_min": 15,
+    "n_buckets": 22,
+    "session_window_et": "10:00-15:30",
+    "boot_seed": 7,
+    "boot_draws": 2000,
+    "gate": 0.1
+  },
+  "gate_metric_predictive_rho": {
+    "rho": -0.0036429509131533496,
+    "ci95_lo": -0.01819480757498878,
+    "ci95_hi": 0.010970934916515188,
+    "n_pairs": 33051,
+    "n_sessions": 1581,
+    "gate": 0.1,
+    "passes_gate": false
+  },
+  "contemporaneous_rho": {
+    "rho": 0.011699211197636393,
+    "n_pairs": 34632
+  },
+  "per_name": {
+    "MU": {
+      "rho_contemporaneous": 0.018880212001048807,
+      "rho_predictive": -0.015412677659759306,
+      "n_predictive_pairs": 13338,
+      "n_contemp_pairs": 13976
+    },
+    "NVDA": {
+      "rho_contemporaneous": -0.09253863547599121,
+      "rho_predictive": -0.05211326293218817,
+      "n_predictive_pairs": 6711,
+      "n_contemp_pairs": 7032
+    },
+    "TSLA": {
+      "rho_contemporaneous": 0.09302834327222592,
+      "rho_predictive": 0.08384064308076972,
+      "n_predictive_pairs": 4390,
+      "n_contemp_pairs": 4600
+    },
+    "AMD": {
+      "rho_contemporaneous": 0.016671092417693538,
+      "rho_predictive": 0.006857140682043524,
+      "n_predictive_pairs": 4621,
+      "n_contemp_pairs": 4842
+    },
+    "GOOGL": {
+      "rho_contemporaneous": 0.05185491233775229,
+      "rho_predictive": 0.029476074331732216,
+      "n_predictive_pairs": 3991,
+      "n_contemp_pairs": 4182
+    }
+  },
+  "persistence_ar1": {
+    "pooled_slope": 0.6037685289003392,
+    "pooled_lag1_corr": 0.5978012597474093,
+    "n_pairs": 33201,
+    "by_name": {
+      "MU": {
+        "slope": 0.5841018221049373,
+        "corr": 0.5790948828712251,
+        "n": 13398
+      },
+      "NVDA": {
+        "slope": 0.6042021829730304,
+        "corr": 0.592262138805543,
+        "n": 6741
+      },
+      "TSLA": {
+        "slope": 0.6954371938578544,
+        "corr": 0.6893618731251553,
+        "n": 4410
+      },
+      "AMD": {
+        "slope": 0.6092071219530687,
+        "corr": 0.6033147512668912,
+        "n": 4641
+      },
+      "GOOGL": {
+        "slope": 0.6069699906798086,
+        "corr": 0.6042253378859336,
+        "n": 4011
+      }
+    },
+    "lag_autocorr_15min_steps": {
+      "1": {
+        "corr": 0.5978012597474093,
+        "n": 33201
+      },
+      "2": {
+        "corr": 0.5016931760568565,
+        "n": 31620
+      },
+      "3": {
+        "corr": 0.44573972409440943,
+        "n": 30039
+      },
+      "4": {
+        "corr": 0.40449912102253427,
+        "n": 28458
+      },
+      "5": {
+        "corr": 0.3713103744046676,
+        "n": 26877
+      },
+      "6": {
+        "corr": 0.35617418679097923,
+        "n": 25296
+      }
+    }
+  },
+  "coverage": {
+    "total_sessions_used": 1581,
+    "total_predictive_pairs": 33051,
+    "by_name": {
+      "MU": {
+        "sessions_used": 638,
+        "mean_buckets_per_session": 22.0,
+        "min_buckets": 22,
+        "max_buckets": 22,
+        "predictive_pairs": 13338
+      },
+      "NVDA": {
+        "sessions_used": 321,
+        "mean_buckets_per_session": 22.0,
+        "min_buckets": 22,
+        "max_buckets": 22,
+        "predictive_pairs": 6711
+      },
+      "TSLA": {
+        "sessions_used": 210,
+        "mean_buckets_per_session": 22.0,
+        "min_buckets": 22,
+        "max_buckets": 22,
+        "predictive_pairs": 4390
+      },
+      "AMD": {
+        "sessions_used": 221,
+        "mean_buckets_per_session": 22.0,
+        "min_buckets": 22,
+        "max_buckets": 22,
+        "predictive_pairs": 4621
+      },
+      "GOOGL": {
+        "sessions_used": 191,
+        "mean_buckets_per_session": 22.0,
+        "min_buckets": 22,
+        "max_buckets": 22,
+        "predictive_pairs": 3991
+      }
+    }
+  },
+  "data_quality": {
+    "MU": {
+      "sessions_seen": 638,
+      "sessions_used": 638,
+      "sessions_no_codes": 0,
+      "sessions_no_conditions_col": 0,
+      "sessions_missing_bbo": 0,
+      "trades_total": 238271051,
+      "trades_after_blacklist": 231381216,
+      "trades_after_minsize": 52595392
+    },
+    "NVDA": {
+      "sessions_seen": 321,
+      "sessions_used": 321,
+      "sessions_no_codes": 0,
+      "sessions_no_conditions_col": 0,
+      "sessions_missing_bbo": 0,
+      "trades_total": 496204026,
+      "trades_after_blacklist": 488454585,
+      "trades_after_minsize": 144840638
+    },
+    "TSLA": {
+      "sessions_seen": 210,
+      "sessions_used": 210,
+      "sessions_no_codes": 0,
+      "sessions_no_conditions_col": 0,
+      "sessions_missing_bbo": 0,
+      "trades_total": 287303599,
+      "trades_after_blacklist": 282517603,
+      "trades_after_minsize": 40178074
+    },
+    "AMD": {
+      "sessions_seen": 221,
+      "sessions_used": 221,
+      "sessions_no_codes": 0,
+      "sessions_no_conditions_col": 0,
+      "sessions_missing_bbo": 0,
+      "trades_total": 120482501,
+      "trades_after_blacklist": 116931519,
+      "trades_after_minsize": 28247962
+    },
+    "GOOGL": {
+      "sessions_seen": 191,
+      "sessions_used": 191,
+      "sessions_no_codes": 0,
+      "sessions_no_conditions_col": 0,
+      "sessions_missing_bbo": 0,
+      "trades_total": 129346999,
+      "trades_after_blacklist": 124560542,
+      "trades_after_minsize": 17668477
+    }
+  }
+}

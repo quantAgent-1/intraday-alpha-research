@@ -1,0 +1,79 @@
+{
+  "family": "sizing_shadow_v1",
+  "report_only": true,
+  "sr0": 0.0,
+  "dev": {
+    "source": "dev",
+    "asof": "2026-07-23T03:44:37.550878+00:00",
+    "panel": {
+      "source": "dev",
+      "T": 1096,
+      "mean_usd": 5.4895,
+      "ci_lo_usd": 3.3176,
+      "ci_hi_usd": 7.7715,
+      "sr_native": 0.1494,
+      "psr_sr0_0": 1.0,
+      "sigma_sr_hat": 0.0301,
+      "min_trl": 130.43,
+      "gamma3": 1.0341,
+      "gamma4": 14.4411,
+      "rho": 0.0367,
+      "mean_deploy_usd": 0.6587,
+      "n_degenerate_sessions": 47,
+      "n_single_event_sessions": 4,
+      "n_multi_event_sessions": 1092,
+      "n_vol_history_skips": 0
+    },
+    "streams": []
+  },
+  "forward": {
+    "source": "forward",
+    "asof": "2026-07-23T06:05:45.099663+00:00",
+    "panel": {
+      "source": "forward",
+      "T": 3,
+      "mean_usd": 45.5092,
+      "ci_lo_usd": 0.0,
+      "ci_hi_usd": 131.9923,
+      "sr_native": 0.6073,
+      "psr_sr0_0": 0.8893,
+      "sigma_sr_hat": null,
+      "min_trl": 5.43,
+      "gamma3": 1.7249,
+      "gamma4": 1.5,
+      "rho": -0.1495,
+      "mean_deploy_usd": 5.4611,
+      "n_degenerate_sessions": 1,
+      "n_single_event_sessions": 0,
+      "n_multi_event_sessions": 3,
+      "n_vol_history_skips": 0
+    },
+    "streams": [
+      {
+        "stream": "classical",
+        "T": 3,
+        "sr_native": 0.4757,
+        "psr_sr0_0": 0.8428,
+        "sigma_sr_hat": null,
+        "min_trl": 8.02
+      },
+      {
+        "stream": "meta",
+        "T": 2,
+        "sr_native": 0.4946,
+        "psr_sr0_0": 0.8871,
+        "sigma_sr_hat": 0.4082,
+        "min_trl": 3.69
+      },
+      {
+        "stream": "portfolio",
+        "T": 2,
+        "sr_native": 0.8556,
+        "psr_sr0_0": 0.982,
+        "sigma_sr_hat": 0.4082,
+        "min_trl": 1.23
+      }
+    ]
+  },
+  "multiple_testing": "Multiple-testing context: 202 inherited trial families (protocol.INHERITED_TRIAL_FAMILIES) + ~23 in-house families. PSR/MinTRL are read against these honest counts; SR0=0 (ruling A7)."
+}

@@ -1,0 +1,573 @@
+{
+  "spec": "R2A-prong0-predeclaration",
+  "spec_ts": "2026-07-23T17:43Z",
+  "note": "PRE-DECLARED DIAGNOSTIC. Off-exchange odd-lot OLI_{t-1} vs raw open->intraday ret_t, incremental to the overnight gap. pass_a, pass_b and label are mechanical.",
+  "non_canonical_partial_run": false,
+  "config": {
+    "panel": [
+      "NVDA",
+      "TSLA",
+      "AMD",
+      "MU",
+      "GOOGL",
+      "KLAC",
+      "MRVL",
+      "LRCX",
+      "TXN",
+      "AMAT"
+    ],
+    "megacap5": [
+      "NVDA",
+      "TSLA",
+      "AMD",
+      "MU",
+      "GOOGL"
+    ],
+    "semi5": [
+      "KLAC",
+      "MRVL",
+      "LRCX",
+      "TXN",
+      "AMAT"
+    ],
+    "cap_date_exclusive": "2026-06-01",
+    "min_signed_prints": 30,
+    "min_resid_rows": 5,
+    "boot_seed": 7,
+    "boot_reps": 2000,
+    "winsor_pct": [
+      1.0,
+      99.0
+    ],
+    "gate_a_rho_max": -0.03,
+    "gate_b_bps_min": 6.0,
+    "windows_et_sec": {
+      "rth": [
+        34200,
+        57600
+      ],
+      "exit_main": [
+        56400,
+        56700
+      ],
+      "early_close_lt": 56700,
+      "sup_horizons": {
+        "1000": [
+          35700,
+          36000
+        ],
+        "1100": [
+          39300,
+          39600
+        ]
+      }
+    },
+    "semi_file_counts": {
+      "KLAC": 604,
+      "MRVL": 604,
+      "LRCX": 604,
+      "TXN": 604,
+      "AMAT": 604
+    }
+  },
+  "analysis_set": {
+    "n_name_days": 4356,
+    "n_sessions": 603,
+    "winsor_bounds_resid_oli": [
+      -0.1722216710288592,
+      0.17836749699792126
+    ],
+    "winsor_bounds_resid_ret": [
+      -694.8608340000892,
+      612.0184453321757
+    ],
+    "names_skipped_lt_min_resid": {}
+  },
+  "adjudication": {
+    "pass_a": false,
+    "pass_b": false,
+    "label": "KILL"
+  },
+  "gate_a_incremental_info": {
+    "rho": 0.006742253228498615,
+    "ci95_lo": -0.02686597841681138,
+    "ci95_hi": 0.03962017038095435,
+    "n": 4356,
+    "n_sessions": 603,
+    "threshold_rho_max": -0.03,
+    "pass": false
+  },
+  "gate_b_magnitude": {
+    "mean_signed_fade_bps": 14.87443423462897,
+    "ci95_lo": -1.1657576098866347,
+    "ci95_hi": 30.18761214669025,
+    "topq_n": 1094,
+    "threshold_bps_min": 6.0,
+    "pass": false,
+    "names_dropped_q3zero": [],
+    "winsor_robustness": {
+      "mean_signed_fade_bps": 13.351051417214949,
+      "ci95_lo": -1.5692551772722172,
+      "ci95_hi": 27.519344107942057,
+      "winsor_bounds": [
+        -548.3042051283732,
+        670.1895965642361
+      ]
+    }
+  },
+  "support_raw_rho": {
+    "rho": -0.012990150003709242,
+    "ci_lo": -0.047467543252535584,
+    "ci_hi": 0.02206170292853358,
+    "n": 4356,
+    "n_sessions": 603
+  },
+  "support_horizons": {
+    "1000": {
+      "gate_a": {
+        "rho": -0.0011490092066205114,
+        "ci_lo": -0.03272626544179858,
+        "ci_hi": 0.030779391753199808,
+        "n": 4356,
+        "n_sessions": 603
+      },
+      "gate_b": {
+        "mean": 3.56406365399643,
+        "ci_lo": -5.892435464509367,
+        "ci_hi": 12.9280417979799,
+        "n": 1094
+      }
+    },
+    "1100": {
+      "gate_a": {
+        "rho": 0.002496248420721414,
+        "ci_lo": -0.02906700024848052,
+        "ci_hi": 0.036725371586691646,
+        "n": 4356,
+        "n_sessions": 603
+      },
+      "gate_b": {
+        "mean": 4.659025615119342,
+        "ci_lo": -7.200149198135905,
+        "ci_hi": 15.77053788066713,
+        "n": 1094
+      }
+    }
+  },
+  "support_tier_split": {
+    "mega": {
+      "gate_a": {
+        "rho": -0.012478341120821726,
+        "ci_lo": -0.06664111061893557,
+        "ci_hi": 0.04231711526529275,
+        "n": 1459,
+        "n_sessions": 603
+      },
+      "gate_b": {
+        "mean": 12.59598040658573,
+        "ci_lo": -11.104313661521223,
+        "ci_hi": 37.47537149621972,
+        "n": 367
+      }
+    },
+    "semi": {
+      "gate_a": {
+        "rho": 0.013166673417994627,
+        "ci_lo": -0.023955340855111345,
+        "ci_hi": 0.047999094890482735,
+        "n": 2897,
+        "n_sessions": 583
+      },
+      "gate_b": {
+        "mean": 16.024630321137725,
+        "ci_lo": -0.9178145597942788,
+        "ci_hi": 33.73683116943811,
+        "n": 727
+      }
+    }
+  },
+  "support_gap_x_oli_4x4": {
+    "0_0": {
+      "mean": 30.600265226857758,
+      "n": 252
+    },
+    "0_1": {
+      "mean": -5.648699146155673,
+      "n": 261
+    },
+    "0_2": {
+      "mean": 8.028064623936647,
+      "n": 296
+    },
+    "0_3": {
+      "mean": 22.2945579868943,
+      "n": 282
+    },
+    "1_0": {
+      "mean": -8.94067574303548,
+      "n": 274
+    },
+    "1_1": {
+      "mean": 3.0902369251795463,
+      "n": 277
+    },
+    "1_2": {
+      "mean": -7.663235235226469,
+      "n": 261
+    },
+    "1_3": {
+      "mean": -11.223484147895615,
+      "n": 273
+    },
+    "2_0": {
+      "mean": -3.713850487406341,
+      "n": 284
+    },
+    "2_1": {
+      "mean": 10.757922960741753,
+      "n": 275
+    },
+    "2_2": {
+      "mean": 37.83598779074107,
+      "n": 254
+    },
+    "2_3": {
+      "mean": 5.79764490677767,
+      "n": 273
+    },
+    "3_0": {
+      "mean": 14.487499411684759,
+      "n": 281
+    },
+    "3_1": {
+      "mean": -4.630968648251705,
+      "n": 272
+    },
+    "3_2": {
+      "mean": -3.6586160425949426,
+      "n": 275
+    },
+    "3_3": {
+      "mean": -20.98828324667396,
+      "n": 266
+    }
+  },
+  "support_first_stage_rho_oli_gap": {
+    "rho": -0.023835761294135536,
+    "n": 4356
+  },
+  "support_per_name": {
+    "NVDA": {
+      "n_kept": 298,
+      "n_resid": 298,
+      "raw_rho": -0.055614438074212395,
+      "resid_rho": -0.04094400975340637,
+      "topq_n": 75,
+      "topq_mean_signed_fade": 17.064532056942934
+    },
+    "TSLA": {
+      "n_kept": 186,
+      "n_resid": 186,
+      "raw_rho": 0.043142101128196046,
+      "resid_rho": 0.05865699233760935,
+      "topq_n": 47,
+      "topq_mean_signed_fade": -9.34726004325386
+    },
+    "AMD": {
+      "n_kept": 186,
+      "n_resid": 186,
+      "raw_rho": 0.058720857044000235,
+      "resid_rho": 0.06493286504022247,
+      "topq_n": 47,
+      "topq_mean_signed_fade": 31.536731029535318
+    },
+    "MU": {
+      "n_kept": 603,
+      "n_resid": 603,
+      "raw_rho": -0.041796251212012324,
+      "resid_rho": -0.02961494000337009,
+      "topq_n": 151,
+      "topq_mean_signed_fade": 14.331206522587845
+    },
+    "GOOGL": {
+      "n_kept": 186,
+      "n_resid": 186,
+      "raw_rho": -0.031629689088886435,
+      "resid_rho": -0.008595068743362525,
+      "topq_n": 47,
+      "topq_mean_signed_fade": 2.8929273123457406
+    },
+    "KLAC": {
+      "n_kept": 578,
+      "n_resid": 578,
+      "raw_rho": 0.032125577699415674,
+      "resid_rho": 0.07994162182506416,
+      "topq_n": 145,
+      "topq_mean_signed_fade": -1.6539082535080776
+    },
+    "MRVL": {
+      "n_kept": 581,
+      "n_resid": 581,
+      "raw_rho": -0.060571843480513615,
+      "resid_rho": -0.04671544364979688,
+      "topq_n": 146,
+      "topq_mean_signed_fade": 23.591068566034956
+    },
+    "LRCX": {
+      "n_kept": 580,
+      "n_resid": 580,
+      "raw_rho": -0.018391900658436083,
+      "resid_rho": -0.017158236352491196,
+      "topq_n": 145,
+      "topq_mean_signed_fade": 15.673372334335774
+    },
+    "TXN": {
+      "n_kept": 577,
+      "n_resid": 577,
+      "raw_rho": -0.053398010946439194,
+      "resid_rho": -0.020974658934704925,
+      "topq_n": 145,
+      "topq_mean_signed_fade": 22.2486287469938
+    },
+    "AMAT": {
+      "n_kept": 581,
+      "n_resid": 581,
+      "raw_rho": -0.042184695806879564,
+      "resid_rho": 0.0005019462327710005,
+      "topq_n": 146,
+      "topq_mean_signed_fade": 20.183128580766496
+    }
+  },
+  "support_coverage": {
+    "NVDA": {
+      "n_candidates": 1649,
+      "n_kept": 298,
+      "funnel": {
+        "no_trades_tm1": 1351,
+        "no_bbo_tm1": 0,
+        "no_bbo_t": 0,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 0
+      },
+      "oddlot_prints_tm1": {
+        "p25": 377033.5,
+        "p50": 488159.0,
+        "p75": 584004.0
+      },
+      "oli_dist": {
+        "p10": -0.059299052774758214,
+        "p50": -0.00775452675656536,
+        "p90": 0.04536533489480474
+      }
+    },
+    "TSLA": {
+      "n_candidates": 1649,
+      "n_kept": 186,
+      "funnel": {
+        "no_trades_tm1": 1463,
+        "no_bbo_tm1": 0,
+        "no_bbo_t": 0,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 0
+      },
+      "oddlot_prints_tm1": {
+        "p25": 597717.25,
+        "p50": 668279.0,
+        "p75": 753765.25
+      },
+      "oli_dist": {
+        "p10": -0.017517544614758327,
+        "p50": 0.012773288962945502,
+        "p90": 0.04399064016078212
+      }
+    },
+    "AMD": {
+      "n_candidates": 1649,
+      "n_kept": 186,
+      "funnel": {
+        "no_trades_tm1": 1463,
+        "no_bbo_tm1": 0,
+        "no_bbo_t": 0,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 0
+      },
+      "oddlot_prints_tm1": {
+        "p25": 137114.5,
+        "p50": 172235.5,
+        "p75": 223149.0
+      },
+      "oli_dist": {
+        "p10": -0.048042128908138096,
+        "p50": -0.01010339935063728,
+        "p90": 0.02654191867623552
+      }
+    },
+    "MU": {
+      "n_candidates": 1649,
+      "n_kept": 603,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 0,
+        "no_bbo_t": 0,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 0
+      },
+      "oddlot_prints_tm1": {
+        "p25": 43477.0,
+        "p50": 58631.0,
+        "p75": 104369.0
+      },
+      "oli_dist": {
+        "p10": -0.06728326906699471,
+        "p50": -0.015176373606845133,
+        "p90": 0.03892021525861648
+      }
+    },
+    "GOOGL": {
+      "n_candidates": 1649,
+      "n_kept": 186,
+      "funnel": {
+        "no_trades_tm1": 1463,
+        "no_bbo_tm1": 0,
+        "no_bbo_t": 0,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 0
+      },
+      "oddlot_prints_tm1": {
+        "p25": 235893.0,
+        "p50": 282476.5,
+        "p75": 337289.5
+      },
+      "oli_dist": {
+        "p10": -0.03670494662232323,
+        "p50": 0.005202990038816394,
+        "p90": 0.047292183958005635
+      }
+    },
+    "KLAC": {
+      "n_candidates": 1649,
+      "n_kept": 578,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 19,
+        "no_bbo_t": 1,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 5
+      },
+      "oddlot_prints_tm1": {
+        "p25": 9820.5,
+        "p50": 12122.0,
+        "p75": 16491.0
+      },
+      "oli_dist": {
+        "p10": -0.15768851783452018,
+        "p50": -0.005184138701265608,
+        "p90": 0.1447557584948264
+      }
+    },
+    "MRVL": {
+      "n_candidates": 1649,
+      "n_kept": 581,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 19,
+        "no_bbo_t": 1,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 2
+      },
+      "oddlot_prints_tm1": {
+        "p25": 24029.5,
+        "p50": 35340.0,
+        "p75": 48521.5
+      },
+      "oli_dist": {
+        "p10": -0.06325776281331837,
+        "p50": -0.005556008563448019,
+        "p90": 0.05310344274116901
+      }
+    },
+    "LRCX": {
+      "n_candidates": 1649,
+      "n_kept": 580,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 19,
+        "no_bbo_t": 1,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 3
+      },
+      "oddlot_prints_tm1": {
+        "p25": 15172.5,
+        "p50": 28233.0,
+        "p75": 40890.5
+      },
+      "oli_dist": {
+        "p10": -0.09037643655140545,
+        "p50": -0.004350579459816154,
+        "p90": 0.08262319430222737
+      }
+    },
+    "TXN": {
+      "n_candidates": 1649,
+      "n_kept": 577,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 19,
+        "no_bbo_t": 1,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 6
+      },
+      "oddlot_prints_tm1": {
+        "p25": 18656.0,
+        "p50": 23654.0,
+        "p75": 29998.5
+      },
+      "oli_dist": {
+        "p10": -0.08907782583852475,
+        "p50": -0.011608255581318807,
+        "p90": 0.06678630052815172
+      }
+    },
+    "AMAT": {
+      "n_candidates": 1649,
+      "n_kept": 581,
+      "funnel": {
+        "no_trades_tm1": 1046,
+        "no_bbo_tm1": 19,
+        "no_bbo_t": 1,
+        "early_close_t": 0,
+        "bars_missing": 0,
+        "few_odd_signs": 0,
+        "no_exit_t": 2
+      },
+      "oddlot_prints_tm1": {
+        "p25": 21991.5,
+        "p50": 27505.0,
+        "p75": 36505.0
+      },
+      "oli_dist": {
+        "p10": -0.08916875640247153,
+        "p50": -0.007315752582338942,
+        "p90": 0.07536646657334456
+      }
+    }
+  }
+}

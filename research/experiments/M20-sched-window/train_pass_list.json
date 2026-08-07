@@ -1,0 +1,13 @@
+{
+  "generated_ts": "2026-07-22T04:22:20.349391+00:00",
+  "split": "train",
+  "n_passing": 2,
+  "cells": [
+    "cluster_1000|C2|h30",
+    "cluster_1000|C2|h60"
+  ],
+  "train_means": {
+    "cluster_1000|C2|h30": 9.2675,
+    "cluster_1000|C2|h60": 12.9287
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "cell_a": {
+    "n_fired_day0": 111,
+    "n_sessions_day0": 104,
+    "day0_mean_net_bps": 3.7034,
+    "day0_ci_lo": -1.0701,
+    "day0_ci_hi": 8.2996,
+    "n_baseline": 6087,
+    "n_sessions_baseline": 1587,
+    "baseline_mean_net_bps": 2.4604,
+    "baseline_ci_lo": 1.8018,
+    "baseline_ci_hi": 3.1488,
+    "baseline_mean_positive": true,
+    "amp_ratio_day0_over_baseline": 1.5052,
+    "amp_prong_binds": true,
+    "meets_n_sessions_floor": true,
+    "meets_ci_lower_gt_0": false,
+    "meets_2x_amplification": false,
+    "underpowered": false,
+    "pass": false,
+    "per_era": [
+      {
+        "era": "2020-22",
+        "n": 48,
+        "n_sessions": 44,
+        "mean_net_bps": -0.5952,
+        "ci_lo": -7.9821,
+        "ci_hi": 5.724
+      },
+      {
+        "era": "2023-26",
+        "n": 63,
+        "n_sessions": 60,
+        "mean_net_bps": 6.9785,
+        "ci_lo": 0.5227,
+        "ci_hi": 13.4552
+      }
+    ],
+    "per_name": [
+      {
+        "symbol": "AMD",
+        "n": 22,
+        "n_sessions": 22,
+        "mean_net_bps": 6.0344,
+        "ci_lo": -5.6373,
+        "ci_hi": 19.2484
+      },
+      {
+        "symbol": "GOOGL",
+        "n": 21,
+        "n_sessions": 21,
+        "mean_net_bps": -7.6283,
+        "ci_lo": -16.5566,
+        "ci_hi": 0.7261
+      },
+      {
+        "symbol": "MU",
+        "n": 23,
+        "n_sessions": 23,
+        "mean_net_bps": 8.159,
+        "ci_lo": -1.1532,
+        "ci_hi": 18.2162
+      },
+      {
+        "symbol": "NVDA",
+        "n": 24,
+        "n_sessions": 24,
+        "mean_net_bps": 8.304,
+        "ci_lo": -0.1432,
+        "ci_hi": 17.1839
+      },
+      {
+        "symbol": "TSLA",
+        "n": 21,
+        "n_sessions": 21,
+        "mean_net_bps": 2.4553,
+        "ci_lo": -8.9322,
+        "ci_hi": 13.1363
+      }
+    ]
+  },
+  "cell_b": {
+    "n_fired": 171,
+    "n_sessions": 133,
+    "mean_net_bps": 0.9846,
+    "ci_lo": -4.3579,
+    "ci_hi": 8.1487,
+    "meets_n_ge_60": true,
+    "meets_ci_lower_gt_0": false,
+    "underpowered": false,
+    "pass": false,
+    "per_era": [
+      {
+        "era": "2020-22",
+        "n": 31,
+        "n_sessions": 29,
+        "mean_net_bps": 14.7529,
+        "ci_lo": -5.3772,
+        "ci_hi": 49.7594
+      },
+      {
+        "era": "2023-26",
+        "n": 140,
+        "n_sessions": 104,
+        "mean_net_bps": -2.0642,
+        "ci_lo": -5.991,
+        "ci_hi": 1.7007
+      }
+    ],
+    "per_name": [
+      {
+        "symbol": "AAPL",
+        "n": 17,
+        "n_sessions": 17,
+        "mean_net_bps": -6.3029,
+        "ci_lo": -14.6325,
+        "ci_hi": 1.5089
+      },
+      {
+        "symbol": "AMAT",
+        "n": 9,
+        "n_sessions": 9,
+        "mean_net_bps": -11.4015,
+        "ci_lo": -22.6297,
+        "ci_hi": 0.6195
+      },
+      {
+        "symbol": "AVGO",
+        "n": 19,
+        "n_sessions": 19,
+        "mean_net_bps": 28.582,
+        "ci_lo": -2.402,
+        "ci_hi": 80.6109
+      },
+      {
+        "symbol": "INTC",
+        "n": 13,
+        "n_sessions": 13,
+        "mean_net_bps": -0.4997,
+        "ci_lo": -11.7436,
+        "ci_hi": 12.0755
+      },
+      {
+        "symbol": "KLAC",
+        "n": 12,
+        "n_sessions": 12,
+        "mean_net_bps": -2.0832,
+        "ci_lo": -19.9189,
+        "ci_hi": 16.8664
+      },
+      {
+        "symbol": "LRCX",
+        "n": 12,
+        "n_sessions": 12,
+        "mean_net_bps": 4.9894,
+        "ci_lo": -7.7973,
+        "ci_hi": 17.2656
+      },
+      {
+        "symbol": "META",
+        "n": 12,
+        "n_sessions": 12,
+        "mean_net_bps": -9.4627,
+        "ci_lo": -25.6901,
+        "ci_hi": 8.5444
+      },
+      {
+        "symbol": "MRVL",
+        "n": 11,
+        "n_sessions": 11,
+        "mean_net_bps": -7.8687,
+        "ci_lo": -22.9884,
+        "ci_hi": 7.1372
+      },
+      {
+        "symbol": "MSFT",
+        "n": 25,
+        "n_sessions": 25,
+        "mean_net_bps": 1.7281,
+        "ci_lo": -6.2656,
+        "ci_hi": 9.5833
+      },
+      {
+        "symbol": "NFLX",
+        "n": 12,
+        "n_sessions": 12,
+        "mean_net_bps": -6.9745,
+        "ci_lo": -13.0181,
+        "ci_hi": -1.3856
+      },
+      {
+        "symbol": "QCOM",
+        "n": 17,
+        "n_sessions": 17,
+        "mean_net_bps": -2.2608,
+        "ci_lo": -13.1706,
+        "ci_hi": 9.7812
+      },
+      {
+        "symbol": "TXN",
+        "n": 12,
+        "n_sessions": 12,
+        "mean_net_bps": 7.1432,
+        "ci_lo": -4.7462,
+        "ci_hi": 19.2331
+      }
+    ]
+  },
+  "cell_c": [
+    {
+      "complex_present": false,
+      "f_adv_tercile": "lo",
+      "n": 223,
+      "mean_net_bps": 0.7049805989637988
+    },
+    {
+      "complex_present": true,
+      "f_adv_tercile": "hi",
+      "n": 59,
+      "mean_net_bps": 7.156359550787841
+    }
+  ]
+}

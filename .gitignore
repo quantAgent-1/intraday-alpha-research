@@ -1,0 +1,39 @@
+# data lake and derived caches — never in git
+# (anchor to repo root: unanchored `data/` can also shadow src/enginev51/data/)
+/data/
+/logs/
+*.npz
+*.parquet
+*.feather
+*.pt
+*.pkl
+
+# environments / secrets
+.venv/
+.env
+.python-version.local
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+dist/
+*.egg-info/
+.mypy_cache/
+
+# trained model artifacts
+models_store/
+research/forward/
+
+# large experiment artifacts (reports .md/.json may stay)
+research/experiments/**/*.feather
+research/experiments/**/*.pt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

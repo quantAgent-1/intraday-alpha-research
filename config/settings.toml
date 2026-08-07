@@ -1,0 +1,39 @@
+# intraday-research-engine research constants (package: enginev51).
+# Changing anything under [splits] after results exist voids them (PROTOCOL v6 §1).
+
+[universe]
+# Plan authoring (Stage A) is restricted to tick-covered names.
+tick = ["NVDA", "TSLA", "AMD", "MU"]
+# Bar-tier names are feature/market context only — never plan targets in Stage A.
+# bar_signal = rows of the feature matrix; bar_anchor = market/sector reference series.
+bar_signal = [
+    "TSLA", "NVDA", "AMD", "MU", "AVGO", "PLTR", "COIN", "MSTR",
+    "SMCI", "META", "AMZN", "GOOGL",
+]
+bar_anchor = ["QQQ", "SMH", "SOXX", "SPY"]
+# Deploy-lens instruments (report-only; never a learning input).
+letf_deploy = ["SOXL", "SOXS", "TQQQ", "SQQQ"]
+
+[execution]
+k_slots = 2
+latency_s = [5, 25]          # manual execution latency, uniform draw, seeded
+curfew_et = "15:50"          # force-flat; no position may survive past this
+last_entry_et = "14:30"      # no plan authored with less than ~80 min of session left
+plan_valid_min_s = 60        # a plan must be executable for at least this long
+
+[splits]
+train_end = "2026-02-28"     # TRAIN  <= this date
+validate_end = "2026-05-31"  # VALIDATE = train_end+1 .. this date
+holdout_start = "2026-06-01" # HOLDOUT >= this date: SEALED (inherited from engineV5, code-guarded)
+
+[books]
+notional_research_usd = 10000   # fixed notional per plan on the underlying — the gate currency
+deploy_equity_usd = 1000        # report-only small-account lens (example; not a real account size)
+
+[storage]
+disk_floor_gb = 20           # backfill aborts below this free space
+
+[costs]
+commission_usd = 0.0         # promo through 2026-12-31; primary cost model per mission
+sec_taf_sell_bps = 0.3       # sell-side regulatory fees, applied to research book
+slippage_market_bps = 0.5    # extra slip on crossing fills, on top of quoted spread

@@ -1,0 +1,24 @@
+{
+  "source": "dev",
+  "asof": "2026-07-23T03:44:37.550878+00:00",
+  "panel": {
+    "source": "dev",
+    "T": 1096,
+    "mean_usd": 5.4895,
+    "ci_lo_usd": 3.3176,
+    "ci_hi_usd": 7.7715,
+    "sr_native": 0.1494,
+    "psr_sr0_0": 1.0,
+    "sigma_sr_hat": 0.0301,
+    "min_trl": 130.43,
+    "gamma3": 1.0341,
+    "gamma4": 14.4411,
+    "rho": 0.0367,
+    "mean_deploy_usd": 0.6587,
+    "n_degenerate_sessions": 47,
+    "n_single_event_sessions": 4,
+    "n_multi_event_sessions": 1092,
+    "n_vol_history_skips": 0
+  },
+  "streams": []
+}

@@ -1,0 +1,93 @@
+{
+  "symbol": "NVDA",
+  "hold": "2h",
+  "entry_model": "maker",
+  "n_triggers": 10636,
+  "n_opened": 10447,
+  "n_posted": 10636,
+  "n_filled": 10447,
+  "n_cancelled": 189,
+  "maker_fill_rate": 0.9822301617149304,
+  "meta_trained": true,
+  "meta": {
+    "pooled": true,
+    "trained": true,
+    "threshold": 0.55,
+    "n_gated": 748,
+    "n_scored": 748,
+    "n_vetoed": 306,
+    "n_unscored": 0
+  },
+  "streams": {
+    "raw_taker": {
+      "n": 10447,
+      "mean_net": -6.260412889441933,
+      "mean_gross": -2.1880884464439436,
+      "mean_mid_to_mid": -0.1856451612902882,
+      "mean_shares": 141.55728917392554
+    },
+    "raw_maker": {
+      "n": 10447,
+      "mean_net": -2.951506662917581,
+      "mean_gross": -0.20756389394084127,
+      "mean_mid_to_mid": 0.05132669665936852,
+      "mean_shares": 141.55728917392554
+    },
+    "gated": {
+      "n": 748,
+      "mean_net": -1.4303206918448943,
+      "mean_gross": 1.306684491978635,
+      "mean_mid_to_mid": 1.5683088235294118,
+      "mean_shares": 140.8475935828877
+    },
+    "gated_meta": {
+      "n": 442,
+      "mean_net": -0.9433344932126778,
+      "mean_gross": 1.794321266968318,
+      "mean_mid_to_mid": 2.1914253393664698,
+      "mean_shares": 140.92986425339367
+    },
+    "b5_through": {
+      "n": 10014,
+      "mean_net": -3.732621995706013,
+      "mean_gross": -0.9884222089075309,
+      "mean_mid_to_mid": -0.6549276013580683,
+      "mean_shares": 141.58398242460555
+    },
+    "b5_haircut50": {
+      "n": 10222,
+      "mean_net": -3.378872073322244,
+      "mean_gross": -0.6349188025826626,
+      "mean_mid_to_mid": -0.336746233613741,
+      "mean_shares": 141.55947955390334
+    },
+    "gated_b5_through": {
+      "n": 708,
+      "mean_net": -2.298058242231621,
+      "mean_gross": 0.43959039548024353,
+      "mean_mid_to_mid": 0.7458757062147049,
+      "mean_shares": 140.9081920903955
+    },
+    "gated_b5_haircut50": {
+      "n": 727,
+      "mean_net": -1.9693717847317544,
+      "mean_gross": 0.7680742778542157,
+      "mean_mid_to_mid": 1.0576685006877566,
+      "mean_shares": 140.88995873452544
+    },
+    "gated_meta_b5_through": {
+      "n": 422,
+      "mean_net": -1.6052091753554867,
+      "mean_gross": 1.132985781990485,
+      "mean_mid_to_mid": 1.5756753554502037,
+      "mean_shares": 140.98104265402844
+    },
+    "gated_meta_b5_haircut50": {
+      "n": 433,
+      "mean_net": -1.378910796766764,
+      "mean_gross": 1.3589376443417813,
+      "mean_mid_to_mid": 1.7854041570438215,
+      "mean_shares": 140.94688221709006
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "registered": false,
+  "trial_id": null,
+  "family": null,
+  "cells": [
+    "cluster_1000|C2|h30",
+    "cluster_1000|C2|h60"
+  ],
+  "gate": {
+    "min_sessions": null,
+    "min_events": null,
+    "rule": "TO BE FROZEN AT REGISTRATION AFTER DR-X9"
+  },
+  "placebo_kill": {
+    "rule": "TO BE FROZEN AT REGISTRATION"
+  },
+  "sizing_form": "clip(E_train/floor, 0, 2) * 10000 USD — report-only"
+}

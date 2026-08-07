@@ -1,0 +1,47 @@
+{
+  "generated_ts": "2026-07-23T07:44:23.608364+00:00",
+  "family": "gap_day_reversion_v1",
+  "params": {
+    "slip_bps_per_leg": 0.5,
+    "slip_bps_rt": 1.0,
+    "fees_rt_bps": 0.25,
+    "decision_hms": [
+      9,
+      35,
+      0
+    ],
+    "exit_hms": [
+      15,
+      45,
+      0
+    ]
+  },
+  "per_name": {
+    "KLAC": {
+      "median_rt_spread_bps": 37.2187,
+      "floor_bps": 38.4687,
+      "n_sessions": 683
+    },
+    "MRVL": {
+      "median_rt_spread_bps": 10.2161,
+      "floor_bps": 11.4661,
+      "n_sessions": 683
+    },
+    "LRCX": {
+      "median_rt_spread_bps": 19.4686,
+      "floor_bps": 20.7186,
+      "n_sessions": 683
+    },
+    "TXN": {
+      "median_rt_spread_bps": 13.8725,
+      "floor_bps": 15.1225,
+      "n_sessions": 683
+    },
+    "AMAT": {
+      "median_rt_spread_bps": 14.7484,
+      "floor_bps": 15.9984,
+      "n_sessions": 683
+    }
+  },
+  "pooled_floor_bps": 15.9984
+}

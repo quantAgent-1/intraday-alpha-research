@@ -1,0 +1,579 @@
+{
+  "spec": "F3-prong0-predeclaration",
+  "spec_ts": "2026-07-23T13:24:06Z",
+  "note": "PRE-DECLARED DIAGNOSTIC. Opening-imbalance state R vs raw same-session forward mid return. PASS/FAIL is mechanical.",
+  "side_mapping": {
+    "B": 1,
+    "A": -1,
+    "S": -1,
+    "N_or_other": 0,
+    "comment": "vendor codes sell/ask side 'A' (never 'S'); see summary"
+  },
+  "snapshot_side_code_counts": {
+    "AMAT": {
+      "N": 409,
+      "B": 140,
+      "A": 141
+    },
+    "AMD": {
+      "B": 443,
+      "N": 563,
+      "A": 604
+    },
+    "GOOGL": {
+      "B": 567,
+      "N": 496,
+      "A": 547
+    },
+    "KLAC": {
+      "N": 504,
+      "B": 92,
+      "A": 94
+    },
+    "LRCX": {
+      "N": 421,
+      "A": 134,
+      "B": 135
+    },
+    "MRVL": {
+      "N": 415,
+      "A": 168,
+      "B": 107
+    },
+    "MU": {
+      "N": 798,
+      "B": 380,
+      "A": 432
+    },
+    "NVDA": {
+      "N": 464,
+      "A": 604,
+      "B": 542
+    },
+    "TSLA": {
+      "N": 395,
+      "B": 527,
+      "A": 688
+    },
+    "TXN": {
+      "N": 470,
+      "B": 117,
+      "A": 103
+    }
+  },
+  "config": {
+    "universe_candidates": [
+      "AMAT",
+      "AMD",
+      "GOOGL",
+      "KLAC",
+      "LRCX",
+      "MRVL",
+      "MU",
+      "NVDA",
+      "TSLA",
+      "TXN"
+    ],
+    "roster": [
+      "AMAT",
+      "AMD",
+      "GOOGL",
+      "KLAC",
+      "LRCX",
+      "MRVL",
+      "MU",
+      "NVDA",
+      "TSLA",
+      "TXN"
+    ],
+    "dropped_names_lt_100": {},
+    "cap_date_exclusive": "2026-06-01",
+    "min_name_days": 100,
+    "windows_et_sec": {
+      "opening_band": [
+        32400,
+        34500
+      ],
+      "snapshot": [
+        34050,
+        34115
+      ],
+      "precross_hi": 34195,
+      "anchor": [
+        34500,
+        34530
+      ],
+      "open_mid": [
+        34205,
+        34235
+      ],
+      "early_close_lt": 56700,
+      "horizons": {
+        "1100": [
+          39300,
+          39600
+        ],
+        "1005": [
+          36000,
+          36300
+        ],
+        "1035": [
+          37800,
+          38100
+        ],
+        "1545": [
+          56400,
+          56700
+        ]
+      }
+    },
+    "boot_seed": 7,
+    "boot_reps": 2000,
+    "winsor_pct": [
+      1.0,
+      99.0
+    ],
+    "gate_a_rho_min": 0.03,
+    "gate_b_bps_min": 6.0
+  },
+  "analysis_set_main": {
+    "n_name_days": 11487,
+    "n_sessions": 1608,
+    "winsor_bounds_R": [
+      -0.0021943988210311152,
+      0.002352911083508891
+    ],
+    "winsor_bounds_fwd": [
+      -410.06198836547384,
+      416.3024396859682
+    ]
+  },
+  "gate_a_info": {
+    "rho_winsor": -0.0004365731084453486,
+    "ci95_lo": -0.021916895176902998,
+    "ci95_hi": 0.021270647775539386,
+    "n": 11487,
+    "n_sessions": 1608,
+    "threshold": 0.03,
+    "pass": false
+  },
+  "gate_b_magnitude": {
+    "topq_n": 2874,
+    "mean_signed_bps": 2.8612339532570816,
+    "ci95_lo": -3.6577492961805054,
+    "ci95_hi": 10.01460447722563,
+    "threshold_bps": 6.0,
+    "pass": false,
+    "names_dropped_q3zero": [],
+    "q3_absR_by_name": {
+      "AMAT": 0.0002244418120129446,
+      "AMD": 0.00029109530054771096,
+      "GOOGL": 0.0007078041814775453,
+      "KLAC": 3.442394724813615e-05,
+      "LRCX": 0.0002210651509272295,
+      "MRVL": 0.00021858266765776283,
+      "MU": 0.00032653410450798393,
+      "NVDA": 0.0003846624906009839,
+      "TSLA": 0.000299585243398908,
+      "TXN": 0.00010335911806370825
+    },
+    "winsor_robustness": {
+      "mean_signed_bps": 2.3448932641411746,
+      "ci95_lo": -3.73310701947544,
+      "ci95_hi": 9.039776066018817,
+      "winsor_bounds": [
+        -442.55016183670153,
+        432.9440526814478
+      ]
+    }
+  },
+  "support_horizons": {
+    "1100": {
+      "n": 11487,
+      "rho_winsor": -0.0004365731084453486,
+      "topq_n": 2874,
+      "topq_mean_signed_bps": 2.8612339532570816,
+      "topq_names_dropped_q3zero": []
+    },
+    "1005": {
+      "n": 11487,
+      "rho_winsor": 0.003541116845512376,
+      "topq_n": 2874,
+      "topq_mean_signed_bps": 1.1183624738678823,
+      "topq_names_dropped_q3zero": []
+    },
+    "1035": {
+      "n": 11487,
+      "rho_winsor": -0.001259534167278586,
+      "topq_n": 2874,
+      "topq_mean_signed_bps": 0.924087655548348,
+      "topq_names_dropped_q3zero": []
+    },
+    "1545": {
+      "n": 11457,
+      "rho_winsor": 0.018796974496524104,
+      "topq_n": 2868,
+      "topq_mean_signed_bps": 13.128402577638221,
+      "topq_names_dropped_q3zero": []
+    }
+  },
+  "support_R_paired_11": {
+    "rho_winsor": 0.017942682667476367,
+    "n": 11487
+  },
+  "support_precross_11": {
+    "n": 11487,
+    "rho_winsor": -0.01734076256844782,
+    "topq_n": 2874,
+    "topq_mean_signed_bps": -5.0352678252766285,
+    "topq_names_dropped_q3zero": []
+  },
+  "support_per_name": {
+    "AMAT": {
+      "n_main_days": 690,
+      "rho_winsor_11": -0.02867516276371773,
+      "q3_absR": 0.0002244418120129446,
+      "topq_n": 173,
+      "topq_mean_signed_bps": -1.243498526976002
+    },
+    "AMD": {
+      "n_main_days": 1608,
+      "rho_winsor_11": -0.0019648924138716203,
+      "q3_absR": 0.00029109530054771096,
+      "topq_n": 402,
+      "topq_mean_signed_bps": 6.031279224745658
+    },
+    "GOOGL": {
+      "n_main_days": 1608,
+      "rho_winsor_11": -0.016635199606461978,
+      "q3_absR": 0.0007078041814775453,
+      "topq_n": 402,
+      "topq_mean_signed_bps": -2.041541663616973
+    },
+    "KLAC": {
+      "n_main_days": 687,
+      "rho_winsor_11": -0.09693495147232357,
+      "q3_absR": 3.442394724813615e-05,
+      "topq_n": 172,
+      "topq_mean_signed_bps": -14.002152375073711
+    },
+    "LRCX": {
+      "n_main_days": 690,
+      "rho_winsor_11": -0.02311277334457797,
+      "q3_absR": 0.0002210651509272295,
+      "topq_n": 173,
+      "topq_mean_signed_bps": -9.242525408332604
+    },
+    "MRVL": {
+      "n_main_days": 690,
+      "rho_winsor_11": 0.061177634289736306,
+      "q3_absR": 0.00021858266765776283,
+      "topq_n": 173,
+      "topq_mean_signed_bps": 11.285411584105516
+    },
+    "MU": {
+      "n_main_days": 1608,
+      "rho_winsor_11": 0.0357580708734776,
+      "q3_absR": 0.00032653410450798393,
+      "topq_n": 402,
+      "topq_mean_signed_bps": 12.91462411375031
+    },
+    "NVDA": {
+      "n_main_days": 1608,
+      "rho_winsor_11": 0.01778949527155048,
+      "q3_absR": 0.0003846624906009839,
+      "topq_n": 402,
+      "topq_mean_signed_bps": 8.808868459962062
+    },
+    "TSLA": {
+      "n_main_days": 1608,
+      "rho_winsor_11": 0.004397438336121771,
+      "q3_absR": 0.000299585243398908,
+      "topq_n": 402,
+      "topq_mean_signed_bps": 6.161904747797365
+    },
+    "TXN": {
+      "n_main_days": 690,
+      "rho_winsor_11": -0.12458555846449097,
+      "q3_absR": 0.00010335911806370825,
+      "topq_n": 173,
+      "topq_mean_signed_bps": -13.413535814387204
+    }
+  },
+  "support_coverage": {
+    "AMAT": {
+      "candidates": 690,
+      "sessions_with_opening_noii": 690,
+      "opening_rows_per_day": {
+        "min": 138,
+        "p25": 138.0,
+        "median": 139.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.5927536231884057,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0,
+        "p75": 0.0002244418120129446,
+        "p90": 0.0008216663667418843,
+        "p99": 0.0035004525010655894
+      },
+      "main_days": 690
+    },
+    "AMD": {
+      "candidates": 1610,
+      "sessions_with_opening_noii": 1610,
+      "opening_rows_per_day": {
+        "min": 120,
+        "p25": 138.0,
+        "median": 138.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.34950248756218905,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0012422360248447205,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 7.70984561174405e-05,
+        "p75": 0.00029109530054771096,
+        "p90": 0.0006350427425997987,
+        "p99": 0.0021502124907386466
+      },
+      "main_days": 1608
+    },
+    "GOOGL": {
+      "candidates": 1610,
+      "sessions_with_opening_noii": 1610,
+      "opening_rows_per_day": {
+        "min": 120,
+        "p25": 138.0,
+        "median": 138.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.30783582089552236,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0012422360248447205,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0002281387060864677,
+        "p75": 0.0007078041814775453,
+        "p90": 0.001476552519716826,
+        "p99": 0.005990206486014968
+      },
+      "main_days": 1608
+    },
+    "KLAC": {
+      "candidates": 690,
+      "sessions_with_opening_noii": 690,
+      "opening_rows_per_day": {
+        "min": 138,
+        "p25": 138.0,
+        "median": 139.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.7292576419213974,
+      "drop_frac": {
+        "early_close": 0.0014492753623188406,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.002898550724637681,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0,
+        "p75": 3.442394724813615e-05,
+        "p90": 0.0005275436149508809,
+        "p99": 0.0029823696144615362
+      },
+      "main_days": 687
+    },
+    "LRCX": {
+      "candidates": 690,
+      "sessions_with_opening_noii": 690,
+      "opening_rows_per_day": {
+        "min": 138,
+        "p25": 138.0,
+        "median": 139.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.6101449275362318,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0,
+        "p75": 0.0002210651509272295,
+        "p90": 0.0008285768036800069,
+        "p99": 0.003415964723791913
+      },
+      "main_days": 690
+    },
+    "MRVL": {
+      "candidates": 690,
+      "sessions_with_opening_noii": 690,
+      "opening_rows_per_day": {
+        "min": 138,
+        "p25": 138.0,
+        "median": 139.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.6014492753623188,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0,
+        "p75": 0.00021858266765776283,
+        "p90": 0.000700269984069497,
+        "p99": 0.0024164290351914243
+      },
+      "main_days": 690
+    },
+    "MU": {
+      "candidates": 1610,
+      "sessions_with_opening_noii": 1610,
+      "opening_rows_per_day": {
+        "min": 120,
+        "p25": 138.0,
+        "median": 138.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.4956467661691542,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0012422360248447205,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 5.3674949981191976e-06,
+        "p75": 0.00032653410450798393,
+        "p90": 0.0008147994290660889,
+        "p99": 0.0031955192387321685
+      },
+      "main_days": 1608
+    },
+    "NVDA": {
+      "candidates": 1610,
+      "sessions_with_opening_noii": 1610,
+      "opening_rows_per_day": {
+        "min": 120,
+        "p25": 138.0,
+        "median": 138.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.2879353233830846,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0012422360248447205,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.00013750844826810438,
+        "p75": 0.0003846624906009839,
+        "p90": 0.0008037500263785895,
+        "p99": 0.0036315821216296065
+      },
+      "main_days": 1608
+    },
+    "TSLA": {
+      "candidates": 1610,
+      "sessions_with_opening_noii": 1610,
+      "opening_rows_per_day": {
+        "min": 120,
+        "p25": 138.0,
+        "median": 138.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.24502487562189054,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0012422360248447205,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.00010588613864729907,
+        "p75": 0.000299585243398908,
+        "p90": 0.0006257988324156008,
+        "p99": 0.0020076877070043706
+      },
+      "main_days": 1608
+    },
+    "TXN": {
+      "candidates": 690,
+      "sessions_with_opening_noii": 690,
+      "opening_rows_per_day": {
+        "min": 138,
+        "p25": 138.0,
+        "median": 139.0,
+        "p75": 139.0,
+        "max": 139
+      },
+      "frac_state_zero_among_main": 0.6811594202898551,
+      "drop_frac": {
+        "early_close": 0.0,
+        "no_snapshot": 0.0,
+        "imb_null": 0.0,
+        "no_adv": 0.0,
+        "no_anchor": 0.0,
+        "no_exit_1100": 0.0
+      },
+      "absR_quantiles_main": {
+        "p50": 0.0,
+        "p75": 0.00010335911806370825,
+        "p90": 0.0005087936980756847,
+        "p99": 0.0033192741157009355
+      },
+      "main_days": 690
+    }
+  },
+  "support_open_to_anchor_sanity": {
+    "rho_raw": -0.03104610108472423,
+    "n": 11487
+  }
+}

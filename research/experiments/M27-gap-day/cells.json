@@ -1,0 +1,220 @@
+{
+  "trial_id": "M27-gap-day",
+  "t50": {
+    "thresh_bps": 50.0,
+    "N": 2292,
+    "n_sessions": 641,
+    "mean_net_bps": -8.7072,
+    "ci_lo": -23.1166,
+    "ci_hi": 5.689,
+    "pooled_floor_bps": 15.9984,
+    "bar_2x_floor_bps": 31.9968,
+    "per_name_mean": {
+      "AMAT": 4.5197,
+      "KLAC": -15.2612,
+      "LRCX": -12.4547,
+      "MRVL": -9.6498,
+      "TXN": -11.3246
+    },
+    "n_names_positive": 1,
+    "meets_n_sessions_floor": true,
+    "meets_ci_lower_gt_0": false,
+    "meets_2x_floor": false,
+    "meets_3of5_names": false,
+    "underpowered": false,
+    "between": false,
+    "pass": false
+  },
+  "t100": {
+    "thresh_bps": 100.0,
+    "N": 1481,
+    "n_sessions": 514,
+    "mean_net_bps": -12.1365,
+    "ci_lo": -30.759,
+    "ci_hi": 7.8908,
+    "pooled_floor_bps": 15.9984,
+    "bar_2x_floor_bps": 31.9968,
+    "per_name_mean": {
+      "AMAT": 4.284,
+      "KLAC": -19.4555,
+      "LRCX": -13.0099,
+      "MRVL": -8.3758,
+      "TXN": -33.1763
+    },
+    "n_names_positive": 1,
+    "meets_n_sessions_floor": true,
+    "meets_ci_lower_gt_0": false,
+    "meets_2x_floor": false,
+    "meets_3of5_names": false,
+    "underpowered": false,
+    "between": false,
+    "pass": false
+  },
+  "adia_panel": {
+    "T": 641,
+    "n_events": 2292,
+    "mean_usd": -31.134,
+    "ci_lo_usd": -83.1817,
+    "ci_hi_usd": 19.9216,
+    "sr_native": -0.0462,
+    "psr_sr0_0": 0.1016,
+    "min_trl": 1071.38,
+    "gamma3": 0.3086,
+    "gamma4": 10.2642,
+    "rho": -0.0837
+  },
+  "funnel": {
+    "candidates": 3550,
+    "no_bar": 0,
+    "early_close": 35,
+    "below_t50": 1143,
+    "no_quote_entry": 80,
+    "no_quote_exit": 0,
+    "stale_quote": 0,
+    "fired": 2292
+  },
+  "cost_floors": {
+    "generated_ts": "2026-07-23T07:44:23.608364+00:00",
+    "family": "gap_day_reversion_v1",
+    "params": {
+      "slip_bps_per_leg": 0.5,
+      "slip_bps_rt": 1.0,
+      "fees_rt_bps": 0.25,
+      "decision_hms": [
+        9,
+        35,
+        0
+      ],
+      "exit_hms": [
+        15,
+        45,
+        0
+      ]
+    },
+    "per_name": {
+      "KLAC": {
+        "median_rt_spread_bps": 37.2187,
+        "floor_bps": 38.4687,
+        "n_sessions": 683
+      },
+      "MRVL": {
+        "median_rt_spread_bps": 10.2161,
+        "floor_bps": 11.4661,
+        "n_sessions": 683
+      },
+      "LRCX": {
+        "median_rt_spread_bps": 19.4686,
+        "floor_bps": 20.7186,
+        "n_sessions": 683
+      },
+      "TXN": {
+        "median_rt_spread_bps": 13.8725,
+        "floor_bps": 15.1225,
+        "n_sessions": 683
+      },
+      "AMAT": {
+        "median_rt_spread_bps": 14.7484,
+        "floor_bps": 15.9984,
+        "n_sessions": 683
+      }
+    },
+    "pooled_floor_bps": 15.9984
+  },
+  "strata": {
+    "per_name": [
+      {
+        "symbol": "AMAT",
+        "n": 473,
+        "mean_net_bps": 4.5197
+      },
+      {
+        "symbol": "KLAC",
+        "n": 461,
+        "mean_net_bps": -15.2612
+      },
+      {
+        "symbol": "LRCX",
+        "n": 476,
+        "mean_net_bps": -12.4547
+      },
+      {
+        "symbol": "MRVL",
+        "n": 512,
+        "mean_net_bps": -9.6498
+      },
+      {
+        "symbol": "TXN",
+        "n": 370,
+        "mean_net_bps": -11.3246
+      }
+    ],
+    "per_year": [
+      {
+        "year": "2023",
+        "n": 316,
+        "mean_net_bps": 11.634
+      },
+      {
+        "year": "2024",
+        "n": 838,
+        "mean_net_bps": -28.4961
+      },
+      {
+        "year": "2025",
+        "n": 824,
+        "mean_net_bps": 2.5309
+      },
+      {
+        "year": "2026",
+        "n": 314,
+        "mean_net_bps": -5.8568
+      }
+    ],
+    "gap_sign": [
+      {
+        "gap_sign": "down_gap",
+        "n": 1050,
+        "mean_net_bps": -2.9679
+      },
+      {
+        "gap_sign": "up_gap",
+        "n": 1242,
+        "mean_net_bps": -13.5592
+      }
+    ],
+    "abs_g_tercile": [
+      {
+        "abs_g_tercile": "hi",
+        "n": 764,
+        "mean_net_bps": -16.3662
+      },
+      {
+        "abs_g_tercile": "lo",
+        "n": 764,
+        "mean_net_bps": -2.8155
+      },
+      {
+        "abs_g_tercile": "mid",
+        "n": 764,
+        "mean_net_bps": -6.9399
+      }
+    ],
+    "entry_spread_tercile": [
+      {
+        "entry_spread_tercile": "hi",
+        "n": 764,
+        "mean_net_bps": -14.7849
+      },
+      {
+        "entry_spread_tercile": "lo",
+        "n": 764,
+        "mean_net_bps": 0.1019
+      },
+      {
+        "entry_spread_tercile": "mid",
+        "n": 764,
+        "mean_net_bps": -11.4386
+      }
+    ]
+  }
+}

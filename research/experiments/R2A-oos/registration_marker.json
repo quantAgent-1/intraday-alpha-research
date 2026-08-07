@@ -1,0 +1,17 @@
+{
+ "family": "retail_fade_daily_v1",
+ "registered_at": "2026-07-28T07:56:59.884764+00:00",
+ "ledger_row": "M30-retail-fade-daily-v1",
+ "vnb": "PASS",
+ "vnb_numbers": {
+  "mean": 24.82,
+  "ci_lo": 7.79,
+  "ci_hi": 43.31,
+  "T": 508,
+  "band": [
+   13.4,
+   31.3
+  ],
+  "reference": 22.36
+ }
+}

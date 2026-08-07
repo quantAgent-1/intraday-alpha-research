@@ -1,0 +1,28 @@
+{
+  "hold": "30m",
+  "pooled": true,
+  "universe": [
+    "MU",
+    "NVDA",
+    "TSLA",
+    "AMD"
+  ],
+  "threshold": 0.55,
+  "seed": 42,
+  "min_train_months": 12,
+  "n_folds": 17,
+  "features": [
+    "spread_bps",
+    "sigma_5m",
+    "abs_eps_over_sigma5",
+    "ofi_5s",
+    "micro_dev_bps",
+    "tod_bucket",
+    "kappa",
+    "eps_over_sigma_stat",
+    "name_code",
+    "stratum_code"
+  ],
+  "first_score_month": "2025-01",
+  "last_score_month": "2026-05"
+}
