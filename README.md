@@ -164,6 +164,69 @@ More detail (role cards, prompting patterns, anti-patterns):
 
 ---
 
+## Research program (M-series)
+
+Each family was **pre-registered** (hypothesis, mechanism, gates) before economics when
+the protocol required it. Full narrative — what each strategy tried, how it worked, and
+the ledger outcome — is in:
+
+**[`docs/STRATEGIES.md`](docs/STRATEGIES.md)**
+
+### Arc
+
+| Phase | IDs | What we were testing |
+|---|---|---|
+| Continuous named payers + ML | M3–M5 | Hours-scale plans on gap / LETF / VWAP / cascade / pin; LGBM & GPU overlays |
+| Closing auction | M6–M15 | NOII / near–mid basis into the official cross; meta-gate; mechanism; breadth |
+| Execution & reversion | M16–M18 | Manual E/Q audit, flow book, OU reversion *as a system* |
+| Intraday after close ban | M20–M27 | Macro windows, open fade, gap-day, earnings×close, sizing shadow |
+| Powered batteries / OOS | M28–M30 | Open-cross bar signals, short-ratio, retail-flow fade on virgin names |
+
+### Index (status at a glance)
+
+| ID | Strategy (one line) | Status |
+|---|---|---|
+| **M3** | Named-payer detectors → complete plans under causal replay | **Closed** — edge did not survive honest fills |
+| **M3-A1** | Bar-tier LGBM veto / leg reprice on M3 | **Fail** |
+| **M4** | TCN/PatchTST on 1s event bars (select / reprice plans) | **Fail** |
+| **M5** | Stage A promotion gate on continuous book | **Fail** (holdout not used) |
+| **M6 / FINAL** | Close auction: \|near−mid\|≥10 bps @15:55:10 → cross | **Pass + holdout pass** → later **frozen/banned** as a direction |
+| **M6b** | Open auction WITH-imbalance | **Fail** |
+| **M7** | Daily megacap cross-sectional reversal | **Fail** |
+| **M8** | Meta-label: take classical basis only if P(win)≥0.55 | **Pass** (walk-forward OOS) |
+| **M8-v2** | Add LETF mechanism features to M8 | **Kill** |
+| **M9** | Auction path features + calibrated sizing | **Null** / no sizing Sharpe gain |
+| **M10** | Forward paper clock on frozen close signals | Partial; stopped with ban |
+| **M11** | Frozen close rule on 28 never-fit Nasdaq names | **Fail** — edge is name-narrow |
+| **M12** | Why name-selective? LETF flow vs index weight | **LETF flow wins** |
+| **M13** | Hedge close-window common factor | Not adopted |
+| **M14** | Calendar strata (month-end, opex, …) | Diagnostic only |
+| **M15** | Top-3 by p_win portfolio shadow | Report-only |
+| **M16** | Phase-0 manual E/Q audit + LETF flow book | Audit / **between** |
+| **M17** | Slow CS / factor momentum (research-only) | Between / replication pass |
+| **M18** | OU reversion + gates + maker + meta as a *system* | **Fail** |
+| **M20** | Macro release-window continuation screen | **Spent** (validate confirm fail) |
+| **M21** | Earnings crowded-setup regimes | Diagnostic |
+| **M22** | Earnings day × closing basis | **Between** |
+| **M23** | Dynamic sizing vs equal notional (ADIA stats) | Report-only |
+| **M24** | Fade open near–ref into close | **Between** |
+| **M25** | Calendar overlay on close stream | Withdrawn |
+| **M26** | 13:02 Treasury results forward | Parked / unbuilt |
+| **M27** | Fade large gaps (low-ADV semis) | **Kill** (mid-alpha real; cost ~2×) |
+| **M28** | 14 bar signals, wide panel, open-cross structure | **Null-at-admission** |
+| **M29** | Short-ratio signals, same structure | **Null-at-admission** |
+| **M30** | Retail odd-lot fade OOS (16 virgin names) | **Not-confirmed** |
+
+**How to read this:** a long list of **fails and nulls is intentional**. The process is
+designed so weak ideas die with a receipt. The durable engineering is the fill/replay
+stack and protocol; the durable *structure* finding is cheap open-cross → late-day exit
+(~1–3 bps all-in) even when signals miss.
+
+Related prong-0 kills (**F1** depth footprint, **F2** buyback, **F3** opening residue)
+are written up in [`docs/STRATEGIES.md`](docs/STRATEGIES.md).
+
+---
+
 ## System shape
 
 ```
@@ -207,15 +270,16 @@ uv run pytest -q       # pure-logic surface does not need a lake
 
 ---
 
-## Research archive (optional deep dive)
+## Research archive
 
-Under [`research/`](research/):
+| Path | Contents |
+|---|---|
+| [`docs/STRATEGIES.md`](docs/STRATEGIES.md) | **Strategy-by-strategy explanations (M3–M30)** |
+| [`research/ledger.jsonl`](research/ledger.jsonl) | Append-only registrations and results |
+| [`research/experiments/`](research/experiments/) | Per-family reports and registrations |
+| [`research/deep/`](research/deep/) | Deep-research lanes + [`EXHAUSTION_MAP.md`](research/deep/EXHAUSTION_MAP.md) |
 
-- Append-only **ledger** of registrations, results, and notes  
-- Per-family registrations and reports  
-- Multi-modality deep-research lanes and an exhaustion map  
-
-Read this if you want process depth — **not** required to evaluate the engineering core.
+Use the strategies page for orientation; use the ledger/experiments for receipts.
 
 ---
 
