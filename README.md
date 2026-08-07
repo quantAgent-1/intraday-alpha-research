@@ -20,29 +20,29 @@ tests, experiment tooling, and research notes. Market data and credentials are n
 
 ---
 
-## For recruiters (60-second read)
+## Overview
 
-**What I care about**
+**Focus**
 
 - Making **false edges die fast** (bad fills, leakage, unsealed holdouts, multiple testing)
 - Building **measurement systems** that survive contact with tape, not just attractive IC plots
 - Clear separation between **research gates** and report-only lenses (capital adequacy, sizing)
 
-**What I built here**
+**What is in this repo**
 
 - An event-time **plan replayer** with seeded manual latency on every leg
 - A **PIT fill kernel** hardened after real phantom-edge failures (odd lots, off-market prints)
 - A **protocol layer** (holdout seal, pre-registration ledger, constant tripwires) enforced in code + tests
 - A large **registered research archive** — including closed families and null results
 
-**How I work with AI agents** (summary; detail below)
+**AI-assisted development** (summary; detail below)
 
-I stay the architect and final authority on protocol, thresholds, and verdicts.
+The human remains architect and final authority on protocol, thresholds, and verdicts.
 Agents implement and attack under written specs; results that matter are human-gated.
 
-**Where to look if you have five minutes**
+**Key paths**
 
-| If you care about… | Open this |
+| Topic | Location |
 |---|---|
 | Simulation correctness | [`src/enginev51/backtest/fills.py`](src/enginev51/backtest/fills.py), [`replay.py`](src/enginev51/backtest/replay.py) |
 | Research integrity | [`src/enginev51/protocol.py`](src/enginev51/protocol.py), [`PROTOCOL.md`](PROTOCOL.md) |
