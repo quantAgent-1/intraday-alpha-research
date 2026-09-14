@@ -1,6 +1,6 @@
 # Contributing
 
-**intraday-research-engine** is published as a **research portfolio**. It is not a
+**Intraday Alpha Research** is published as a **research portfolio**. It is not a
 multi-contributor product with a feature roadmap. That said, if you fork or open issues:
 
 ## Rules that protect scientific integrity

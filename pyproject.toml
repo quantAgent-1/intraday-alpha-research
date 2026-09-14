@@ -1,5 +1,5 @@
 [project]
-name = "intraday-research-engine"
+name = "intraday-alpha-research"
 version = "0.1.0"
 description = "Signal-only research system for plan-level economics: causal fills, sealed holdouts, registered experiments."
 readme = "README.md"

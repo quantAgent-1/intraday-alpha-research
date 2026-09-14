@@ -1,6 +1,6 @@
 # AI-agent workflow (detail)
 
-Companion to the [README](../README.md) landing page for **intraday-research-engine**.
+Companion to the [README](../README.md) landing page for **Intraday Alpha Research**.
 This document expands how human judgment and AI agents co-produced the research lab
 without diluting protocol control.
 

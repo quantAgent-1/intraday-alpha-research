@@ -1,4 +1,4 @@
-# intraday-research-engine — Research Protocol (v6.0)
+# Intraday Alpha Research — Research Protocol (v6.0)
 
 Inherits engineV5 `PROTOCOL.md` v5.0 (and through it engineV2's `research_loop/PROTOCOL.md` v1)
 verbatim unless amended below. These rules bind every strategy/model claim in this repo.

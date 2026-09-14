@@ -1,4 +1,4 @@
-# intraday-research-engine
+# Intraday Alpha Research
 
 **A research lab for testing stock-trading ideas honestly — without placing real orders.**
 

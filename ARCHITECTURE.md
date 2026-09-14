@@ -1,6 +1,6 @@
 # Architecture
 
-Public map of **intraday-research-engine** (Python package: `enginev51`).
+Public map of **Intraday Alpha Research** (Python package: `enginev51`).
 For binding rules, see `PROTOCOL.md`. For design rationale, see `DESIGN.md`.
 
 ---

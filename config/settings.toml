@@ -1,4 +1,4 @@
-# intraday-research-engine research constants (package: enginev51).
+# intraday-alpha-research research constants (package: enginev51).
 # Changing anything under [splits] after results exist voids them (PROTOCOL v6 §1).
 
 [universe]

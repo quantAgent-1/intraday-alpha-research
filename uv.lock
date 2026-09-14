@@ -582,7 +582,7 @@ wheels = [
 ]
 
 [[package]]
-name = "intraday-research-engine"
+name = "intraday-alpha-research"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

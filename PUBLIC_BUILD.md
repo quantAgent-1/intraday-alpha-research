@@ -1,6 +1,6 @@
 # Public portfolio build notes
 
-**Public project name:** `intraday-research-engine`  
+**Public project name:** `intraday-alpha-research`  
 **Python import package:** `enginev51` (unchanged for code stability)
 
 This tree is a **sanitized export** of a private research repository, intended for

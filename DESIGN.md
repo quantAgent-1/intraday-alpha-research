@@ -1,6 +1,6 @@
-# intraday-research-engine — Design
+# Intraday Alpha Research — Design
 
-> Public name: **intraday-research-engine**. PROTOCOL.md = binding rules.
+> Public name: **Intraday Alpha Research**. PROTOCOL.md = binding rules.
 > ARCHITECTURE.md = package map. This file = why the engine is shaped this way.
 
 ## Mission
