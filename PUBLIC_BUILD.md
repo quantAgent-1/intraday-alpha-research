@@ -50,4 +50,4 @@ The private repository is **not** modified by this export.
 - [x] Core unit tests green (protocol / fills / config / isolation)
 - [x] One-off scripts use relative scratch paths (not machine temp dirs)
 
-**Acceptable residual historical language:** research notes may still *mention* predecessor projects (`engineV2`/`engineV5`), `PLAYBOOK`/`HANDOFF` as prior private docs, or experiment family names. Those are research archive references, not live secrets.
+**Acceptable residual historical language:** research notes may still *mention* predecessor projects (`engineV2`/`engineV5`), `PLAYBOOK`/`HANDOFF` as prior private docs, or experiment family names. Those are research archive references, not live secrets. `engineV2` is published as [Equity Signal Engine](https://github.com/quantAgent-1/equity-signal-engine); `engineV5` is not published.
