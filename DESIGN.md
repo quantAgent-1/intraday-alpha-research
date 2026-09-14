@@ -16,7 +16,7 @@ North star: honest positive net expectancy on the k-slot taken plan stream.
 - engineV5: bar-tier 30m–4h LightGBM IC is real (+0.03–0.05, CI>0) but a 2-slot manual account
   monetizes ~none of it; bar-tier information is exhausted by trees; passive limit entries earn
   +2.21 bps [2.09, 2.34] vs crossing — a banked execution fact.
-- Therefore enginev5.1 is **not** a re-run: it changes the horizon (hours-end, σ√h ≫ spread),
+- Therefore Intraday Alpha Research is **not** a re-run: it changes the horizon (hours-end, σ√h ≫ spread),
   the trigger (named-payer flow states, not always-on forecasts), the data tier for ML
   (raw tick/quote event stream), the objective (plan-level economics under deployment reality),
   and the execution prior (limit-first).

@@ -1,7 +1,8 @@
 # Public portfolio build notes
 
 **Public project name:** `intraday-alpha-research`  
-**Python import package:** `enginev51` (unchanged for code stability)
+**Python import package:** `enginev51` (unchanged for code stability)  
+**Historical working name:** `enginev5.1` (still appears in dated notes under `research/`)
 
 This tree is a **sanitized export** of a private research repository, intended for
 GitHub portfolio / job-application use. The private source tree was **not** renamed

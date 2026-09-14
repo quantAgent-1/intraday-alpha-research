@@ -2,7 +2,7 @@
 research/experiments/M18-reversion-system/).
 
 A byte-faithful port of engineV2's CPU-backtest OU-reversion semantics onto the
-enginev5.1 event_bars1s (1-second) substrate. Harness only: no economics
+Intraday Alpha Research event_bars1s (1-second) substrate. Harness only: no economics
 interpretation lives here.
 
 Port target = engineV2 ``backtest/cpu`` kernels (reversion_nb / event_loop_nb /

@@ -1,4 +1,4 @@
-"""Settings for enginev5.1.
+"""Settings for Intraday Alpha Research.
 
 Two layers, deliberately separate:
 - `Settings` (pydantic-settings): secrets + operational knobs from `.env`
